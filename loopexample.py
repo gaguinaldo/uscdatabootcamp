@@ -14,3 +14,8 @@ for i in d:
 import pandas as pd
 import matplotlib as plt
 import bokeh
+import sklearn
+
+#import csv file
+df = pd.read_csv("data.csv")
+df.head()
