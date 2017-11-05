@@ -5,7 +5,7 @@ This repository contains all of the homework assignments for the October 2017 co
 # Misc Resources  
 These are some of the resources that I found useful for the bootcamp.
 
-### GitHub and Git Bash: Create Folders in a Repository
+### GitHub and Git Bash: Create Folders in a Repository [LINK]https://youtu.be/rVNFPj9jtb0
 https://youtu.be/rVNFPj9jtb0
 
 ### How do I add files and folders into GitHub repos?
