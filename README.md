@@ -1,6 +1,6 @@
 # uscdatabootcamp
 
-This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp.
+This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp and a few resources that I found helpful. 
 
 # Misc Resources  
 These are some of the resources that I found useful for the bootcamp.
@@ -52,3 +52,6 @@ There are great videos for both Python novices as well as experts.
 Other than Learn Python the Hard Way (which is arguably a book) probably the most well known Python books are:
 +Python in a Nutshell by Alex Martelli
 +Learning Python or Programming Python by Mark Lutz
+
+## The Google Software Engineer Interview
+https://www.anthonydmays.com/2017/01/04/interviewing-at-google-heres-6-things-you-absolutely-need-to-do/
