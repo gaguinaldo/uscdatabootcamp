@@ -9,3 +9,7 @@ d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for i in d:
     if i % 2 == 0:
         c.append(i **2)
+
+
+import pandas as pd
+import matplotlib as plt
