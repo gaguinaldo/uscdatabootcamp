@@ -6,6 +6,8 @@ https://www.osisoft.com/Presentations/Machine-Learning-for-Prediction-Purposes-o
 
 https://www.technologyreview.com/s/540806/how-artificial-intelligence-can-fight-air-pollution-in-china/
 
+https://www.quora.com/Which-companies-use-machine-learning-in-manufacturing
+
 http://www.enveraconsulting.com/future-environmental-compliance/
 
 https://youtu.be/iiWae9f6iJo
