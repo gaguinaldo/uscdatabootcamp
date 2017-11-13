@@ -2,7 +2,7 @@ This file contains the workbook and code in it's current state.  More work needs
 
 # Approach
 
-My approach to this assignment was to solve the problem using pure Excel, and document the steps that I took to do so.  By breaking down the problem into smaller chucks, solving the entire problem becomes a task of solving each chunk on its own.
+My approach to this assignment was to solve the problem using pure Excel ([file](https://enveraconsulting.box.com/s/q47m3xicxt6m53f5p6n74ciglrmgfqi4)), and document the steps that I took to do so.  By breaking down the problem into smaller chucks, solving the entire problem becomes a task of solving each chunk on its own.
 
 1.	Create list of unique ticker symbols by looping through the entire master list and store the unique tickers in a separate column.
     * Use exiting VBA code to return the unique tickers to a new table. 
