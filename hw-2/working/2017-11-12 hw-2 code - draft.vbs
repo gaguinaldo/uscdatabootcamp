@@ -1,3 +1,16 @@
+Sub main_analysis()
+
+    Call create_headers
+    Call remove_duplicates
+    Call share_tot
+    Call max_min_date
+    Call concat
+    Call close_lookup
+    Call open_lookup
+    Call change
+    Call summary
+
+End Sub
 
 '--------------------------------------------------------------------------------
 'Creates all headers for new columns that are created from the script.
@@ -42,9 +55,9 @@ Sub concat()
 
     Dim last_row As Long
     last_row = Cells(Rows.Count, "A").End(xlUp).Row
+    
     Dim s_last_row As Long
     s_last_row = Cells(Rows.Count, "K").End(xlUp).Row
-
 
     For i = 2 To last_row
     
@@ -68,7 +81,6 @@ End Sub
 Sub max_min_date():
     
     Dim last_row As Long
-    
     last_row = Cells(Rows.Count, "A").End(xlUp).Row
     
     Dim i As Long
@@ -160,6 +172,7 @@ Sub change()
     last_row = Cells(Rows.Count, "K").End(xlUp).Row
     
     For i = 2 To last_row
+    
         Cells(i, 18).Value = Cells(i, 16).Value - Cells(i, 17).Value
         Cells(i, 19).Value = ((Cells(i, 18).Value + 1) / (Cells(i, 16).Value + 1)) * 100
         
@@ -236,5 +249,3 @@ Sub share_tot():
     Next i
 
 End Sub
-
-
