@@ -5,8 +5,8 @@ This file contains the workbook and code in it's current state.  More work needs
 My approach to this assignment was to solve the problem using pure Excel, and document the steps that I took to do so.  By breaking down the problem into smaller chucks, solving the entire problem becomes a task of solving each chunk on its own.
 
 1.	Create list of unique ticker symbols by looping through the entire master list and store the unique tickers in a separate column.
-  -a.	Use exiting VBA code to return the unique tickers to a new table. 
-  -b.	Use VBA code to insert the headers into a new table. 
+- a.	Use exiting VBA code to return the unique tickers to a new table. 
+- b.	Use VBA code to insert the headers into a new table. 
 
 2.	Loop through list of unique tickers and calculate the total volume of shares moved during the year.  Return the sum, into a new column. One risk is that there are close to 1 MM rows. 
 a.	This is like a sub total function or a sumif statement in Excel. 
