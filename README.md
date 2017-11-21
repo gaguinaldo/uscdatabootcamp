@@ -7,6 +7,9 @@ These are some of the resources that I found useful for the bootcamp.
 
 ### [GitHub and Git Bash: Create Folders in a Repository](https://youtu.be/rVNFPj9jtb0)
 
+### Adding multiple files to github.
+https://stackoverflow.com/questions/19576116/how-to-add-multiple-files-to-git-at-the-same-time
+
 ### How do I add files and folders into GitHub repos?
 https://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos
 
