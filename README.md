@@ -57,3 +57,6 @@ Other than Learn Python the Hard Way (which is arguably a book) probably the mos
 
 ### The Google Software Engineer Interview
 https://www.anthonydmays.com/2017/01/04/interviewing-at-google-heres-6-things-you-absolutely-need-to-do/
+
+### Quick Pandas Cheet Sheet
+https://jeffdelaney.me/blog/useful-snippets-in-pandas/
