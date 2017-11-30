@@ -40,6 +40,9 @@ https://www.anthonydmays.com/2017/01/04/interviewing-at-google-heres-6-things-yo
 ### Quick Pandas Cheet Sheet
 https://jeffdelaney.me/blog/useful-snippets-in-pandas/
 
+### Pandas Video Series (Data School)
+http://www.dataschool.io/easier-data-analysis-with-pandas/
+
 ### Online Resources for learning python
 + The Hitchhiker's Guide to Python - one of the best guides out there. It covers everything from installation to common modules and writing great code. It is highly recommended for novices as well as advanced Pythonistas.
 
