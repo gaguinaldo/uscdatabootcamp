@@ -25,6 +25,9 @@ https://help.github.com/articles/deleting-a-repository/
 ### Github for noobs video series by DEVTIPS (youtube)
 https://youtu.be/1h9_cB9mPT8
 
+### Virtual environments 
+https://conda.io/docs/user-guide/tasks/manage-environments.html
+
 ### How to Calculate a Correlation (and P-Value) in Microsoft Excel
 https://youtu.be/vFcxExzLfZI
 
