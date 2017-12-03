@@ -30,7 +30,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [How to export an iPython Notebook into an .md file](https://github.com/jupyter/nbconvert)
 	`jupyter nbconvert --to markdown <input notebook include file extension>`
 * [Jupyter Notebook Keyboard Shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
-* [Terminal Keyboard Shortcuts] (https://gist.github.com/poopsplat/7195274)
+* [Terminal Keyboard Shortcuts](https://gist.github.com/poopsplat/7195274)
 * [Atom Multi Cursor](https://www.youtube.com/watch?v=d3fg2z1FL7A)
 
 ### Online Resources for learning python (from Learn Code Teach LA)
