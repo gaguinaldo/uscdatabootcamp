@@ -29,7 +29,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [Pandas Video Series (Data School)](http://www.dataschool.io/easier-data-analysis-with-pandas/)
 * [How to export an iPython Notebook into an .md file](https://github.com/jupyter/nbconvert)
 	`jupyter nbconvert --to markdown <input notebook include file extension>`
-* [Jupyter Notebook Keyboard Shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+* [Jupyter Notebook Shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+* [Jupyter Notebook Keyboard Shortcuts]](http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html)
 * [Terminal Keyboard Shortcuts](https://gist.github.com/poopsplat/7195274)
 * [Atom Multi Cursor](https://www.youtube.com/watch?v=d3fg2z1FL7A)
 
