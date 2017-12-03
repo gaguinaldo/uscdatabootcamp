@@ -14,6 +14,7 @@ These are some of the resources that I found useful for the bootcamp.
 
 * [GitHub and Git Bash: Create Folders in a Repository](https://youtu.be/rVNFPj9jtb0)
 * [Adding multiple files to github.](https://stackoverflow.com/questions/19576116/how-to-add-multiple-files-to-git-at-the-same-time)
+	`git add .` then `git commit -a -m "MY MESSAGE HERE"` then `git push origin master`
 * [How do I add files and folders into GitHub repos?](https://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos)
 * [Markdown cheatsheet](http://assemble.io/docs/Cheatsheet-Markdown.html)
 * [Gitignore generator](https://www.gitignore.io/)
