@@ -2,6 +2,8 @@
 
 This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp and a few resources that I found helpful. 
 
+***
+
 # Tools
 * atom
 * iTerm2
