@@ -11,5 +11,4 @@ This assignment will help you also start thinking about your resume summary and 
 + One More Thing....Your Profile Coach will be providing comments and feedback on your bio directly on your Google Doc. Please check back for comments two weeks after the due date for this assignment. Incorporate the feedback and suggestions immediately."
 
 ### Submissions
-+ [Link to Bio and pitch](https://docs.google.com/document/d/1vlvwKU-WxvgbuA9Sme7bQiBWfXpO7Ts9-vIFlkIApR4/edit?usp=sharing)
-+ [Link to petal activity](https://docs.google.com/document/d/1vlvwKU-WxvgbuA9Sme7bQiBWfXpO7Ts9-vIFlkIApR4/edit?usp=sharing)
++ [Link to submission](https://drive.google.com/drive/folders/1X3XS3RVShfD0fUgekl3EU3WRcXZT8LaY?usp=sharing)
