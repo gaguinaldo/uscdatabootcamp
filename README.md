@@ -41,6 +41,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Python Graph Gallery](https://github.com/grantaguinaldo/uscdatabootcamp.git)
 * [Python List Comprehensions](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/)
 * [iTerm Cheat Sheet](https://gist.github.com/squarism/ae3613daf5c01a98ba3a)
+* [API Response Codes](http://www.restapitutorial.com/httpstatuscodes.html)
 
 ***
 
