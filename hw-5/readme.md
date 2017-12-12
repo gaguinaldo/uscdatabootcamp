@@ -10,6 +10,8 @@ Based on this preliminary analysis three observations have been made.
 **Second.** Based on the general direction of the clustering, there seems to be a negative relationship between the average fare per city and the total number of riders per city.  One reason for this is purely based on supply-and-demand principles since more drivers and riders on the platform is expected to bring down the overall cost of a ride. There seems to be an estimated 20% increase in the average fare when comparing suburban and urban areas.  In addition, there seems to be an estimated 40% increase between the fares in rural and urban areas. 
 
 **Thrid.**  Another reason for the difference in fare in urban and rural areas could be the distance  of the ride. Longer distances in rural areas could also lead to an increase in the average fare, however, the data set does not have any data related to the distance that each rider went on each ride. 
+
+The iPython Notebook of this assignment can be found [here](https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/hw-5/hw-5.ipynb).
  
 ***
 
