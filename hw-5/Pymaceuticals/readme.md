@@ -1,5 +1,5 @@
 
-## Grant Aguinaldo, HW-5 Submission
+## Grant Aguinaldo, HW-5 Submission (Partial)
 
 ## Option 2: Pymaceuticals Inc
 
