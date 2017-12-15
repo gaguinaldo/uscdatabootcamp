@@ -20,3 +20,15 @@ Use the list of city ID and the general call structure to generate the urls need
 + Perform a weather check on each of the cities using a series of successive API calls.
 + Include a print log of each city as it's being processed with the city number, city name, and requested URL.
 + Save both a CSV of all data retrieved and png images for each scatter plot.
+
+We're going to need to extract the following information from each city:
+
++ Temperature (F)
++ Latitude
++ Humidity (%)
++ Cloudiness (%)
++ Wind Speed (mph)
++ City ID
++ City Name
+
+It would be best to store these data in a Pandas dataframe where each of the fields noted above are the columns and the city name is provided as the index. It is possible to use the index of pandas in the dataframe for this analysis.  It may be best to store each value in a Python `dict` so that we can use `pd.DataFrame(<DICT NAME)`.
