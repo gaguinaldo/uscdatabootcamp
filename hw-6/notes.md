@@ -32,3 +32,7 @@ We're going to need to extract the following information from each city:
 + City Name
 
 It would be best to store these data in a Pandas dataframe where each of the fields noted above are the columns and the city name is provided as the index. It is possible to use the index of pandas in the dataframe for this analysis.  It may be best to store each value in a Python `dict` so that we can use `pd.DataFrame(<DICT NAME)`.
+
+### Step 3:
+
+Once the values are loaded in a Pandas DataFrame, we'll need use `matplotlib` and `Pandas` to create the relationships that are needed. 
