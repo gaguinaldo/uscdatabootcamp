@@ -36,3 +36,8 @@ It would be best to store these data in a Pandas dataframe where each of the fie
 ### Step 3:
 
 Once the values are loaded in a Pandas DataFrame, we'll need use `matplotlib` and `Pandas` to create the relationships that are needed. 
+
+* Temperature (F) vs. Latitude
+* Humidity (%) vs. Latitude
+* Cloudiness (%) vs. Latitude
+* Wind Speed (mph) vs. Latitude
