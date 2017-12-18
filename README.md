@@ -2,6 +2,14 @@
 This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp and a few resources that I found helpful. 
 
 ***
+# Natural Language Processing Libraries
+* [NLTK](http://www.nltk.org/)
+* [TextBlob](http://textblob.readthedocs.io/en/dev/)
+* [Spacy](https://spacy.io/)
+
+# Wrappers
+* [Open Weather Mappy](http://openweathermapy.readthedocs.io/en/latest/)
+* [Tweepy](http://www.tweepy.org/)
 
 # Tools
 * [atom](https://atom.io/)
@@ -43,6 +51,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [iTerm Cheat Sheet](https://gist.github.com/squarism/ae3613daf5c01a98ba3a)
 * [API Response Codes](http://www.restapitutorial.com/httpstatuscodes.html)
 * [Twitter API Download and analysis](https://www.youtube.com/watch?v=o_OZdbCzHUA)
+* [How to Except When You're Excepting](https://www.youtube.com/watch?v=I_d_qV3leZw)
+* [Jupyter Notebook Keyboard Shortcuts](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/pdf_bw/)
 
 ***
 
