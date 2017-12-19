@@ -53,6 +53,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [Twitter API Download and analysis](https://www.youtube.com/watch?v=o_OZdbCzHUA)
 * [How to Except When You're Excepting](https://www.youtube.com/watch?v=I_d_qV3leZw)
 * [Jupyter Notebook Keyboard Shortcuts](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/pdf_bw/)
+* [Convert date strings to datetime objects](https://chrisalbon.com/python/strings_to_datetime.html)
+* [Python 3 Documentation RE Datetime objects](https://docs.python.org/3/library/datetime.html)
 
 ***
 
