@@ -56,6 +56,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Convert date strings to datetime objects](https://chrisalbon.com/python/strings_to_datetime.html)
 * [Python 3 Documentation RE Datetime objects](https://docs.python.org/3/library/datetime.html)
 * [Formatting Python Date/Time objects](https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in-python)
+* [Flask Web Tutorial](https://pythonspot.com/flask-web-app-with-python/)
 
 ***
 
