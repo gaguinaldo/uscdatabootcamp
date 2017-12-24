@@ -57,6 +57,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Python 3 Documentation RE Datetime objects](https://docs.python.org/3/library/datetime.html)
 * [Formatting Python Date/Time objects](https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in-python)
 * [Flask Web Tutorial](https://pythonspot.com/flask-web-app-with-python/)
+* [Flask Web App Deployment Using Heroku](https://progblog.io/How-to-deploy-a-Flask-App-to-Heroku/)
 
 ***
 
