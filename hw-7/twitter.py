@@ -10,21 +10,20 @@ auth = tweepy.OAuthHandler(Consumer_Key, Consumer_API_Secret)
 auth.set_access_token(Access_Token, Access_Token_Secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 api_ = tweepy.API(auth)
+main_account = '@enveraai'
 last_tweet_accounts = ['@southwestair', '@united']
 
-###################
-# 	Possible errors occur when there are no tweets for the account.
-# 	Error is 'IndexError: list index out of range'
-# 	If errors occur at the start, the code should restart from the beginning after waiting for 5 min.
+def initial_search(main_account):
 
-last_tweet = api.search('@enveraai')
+	last_tweet = api.search(main_account)
 
-last_tweet_text = last_tweet['statuses'][0]['text'].lower()
-last_tweet_id = last_tweet['statuses'][0]['id']
-last_tweet_screen_name = last_tweet['statuses'][0]['user']['screen_name']
-twitter_search_name = re.findall(r"(@[a-z0-9]+)", last_tweet_text)
-last_tweet_analysis = twitter_search_name[1]
-###################
+	last_tweet_text = last_tweet['statuses'][0]['text'].lower()
+	last_tweet_id = last_tweet['statuses'][0]['id']
+	last_tweet_screen_name = last_tweet['statuses'][0]['user']['screen_name']
+	twitter_search_name = re.findall(r"(@[a-z0-9]+)", last_tweet_text)
+	last_tweet_analysis = twitter_search_name[1]
+
+	return last_tweet_text, last_tweet_id, last_tweet_screen_name, last_tweet_analysis
 
 def extract_tweets(last_tweet_analysis):
 	tweet_text_list = []
@@ -80,29 +79,34 @@ def reply_in_rate_error(last_tweet_id, last_tweet_screen_name):
 # 	Error is "tweepy.error.TweepError"
 #	If the error occurs the code should not reply and restart.
 
-if last_tweet_analysis in last_tweet_accounts:
-	print('If branch')
-	print(last_tweet_analysis)
-	print(last_tweet_accounts)
-	#reply_tweet_error = reply_in_error(last_tweet_id, last_tweet_screen_name)
+while(True):
+	
+	last_tweet_text, last_tweet_id, last_tweet_screen_name, last_tweet_analysis = initial_search(main_account)
 
-###################
+	if last_tweet_analysis in last_tweet_accounts:
+		print('If branch')
+		print(last_tweet_analysis)
+		print(last_tweet_accounts)
+		#reply_tweet_error = reply_in_error(last_tweet_id, last_tweet_screen_name)
 
-###################
-#	Possible error include hitting the rate limit.  Error is "tweepy.error.RateLimitError"
-#	If the rate limit error occurs the code should send out tweet to retry in 60 min.
-# 		Run this code: reply_tweet_rate_error = reply_in_rate_error(last_tweet_id, last_tweet_screen_name)
-# 	Current bug includes having the code clearing the list 'last_tweet_accounts' so the code
-# 	always send out the graphs to the user regardless if the account was aleady analyzed. 
+	###################
 
-else:
-	last_tweet_accounts.append(last_tweet_analysis)
-	tweet_list = extract_tweets(last_tweet_analysis)
-	compound_score = analyze_tweets(tweet_list)
-	fig = plotr(compound_score)
-	#reply_tweet = reply_with_image(last_tweet_id, last_tweet_screen_name)
-	print('Else branch')
-	print(last_tweet_analysis)
-	print(last_tweet_accounts)
+	###################
+	#	Possible error include hitting the rate limit.  Error is "tweepy.error.RateLimitError"
+	#	If the rate limit error occurs the code should send out tweet to retry in 60 min.
+	# 		Run this code: reply_tweet_rate_error = reply_in_rate_error(last_tweet_id, last_tweet_screen_name)
+	# 	Current bug includes having the code clearing the list 'last_tweet_accounts' so the code
+	# 	always send out the graphs to the user regardless if the account was aleady analyzed. 
 
-###################
+	else:
+		last_tweet_accounts.append(last_tweet_analysis)
+		tweet_list = extract_tweets(last_tweet_analysis)
+		compound_score = analyze_tweets(tweet_list)
+		fig = plotr(compound_score)
+		#reply_tweet = reply_with_image(last_tweet_id, last_tweet_screen_name)
+		print('Else branch')
+		print(last_tweet_analysis)
+		print(last_tweet_accounts)
+
+	###################
+	time.sleep(10)
