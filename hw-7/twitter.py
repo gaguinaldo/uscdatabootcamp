@@ -110,3 +110,41 @@ while(True):
 
 	###################
 	time.sleep(10)
+
+
+
+####################################################################
+####################################################################
+################################## START HERE ######################
+####################################################################
+####################################################################
+
+#Next addtion to code is to handle the errors!
+
+while(True):
+	
+	last_tweet_text, last_tweet_id, last_tweet_screen_name, last_tweet_analysis = initial_search(main_account)
+
+	try:
+		if last_tweet_analysis in last_tweet_accounts:
+			print('If branch')
+			print(last_tweet_analysis)
+			print(last_tweet_accounts)
+			#reply_tweet_error = reply_in_error(last_tweet_id, last_tweet_screen_name)
+
+		else:
+
+			last_tweet_accounts.append(last_tweet_analysis)
+			tweet_list = extract_tweets(last_tweet_analysis)
+			compound_score = analyze_tweets(tweet_list)
+			fig = plotr(compound_score)
+			#reply_tweet = reply_with_image(last_tweet_id, last_tweet_screen_name)
+			print('Else branch')
+			print(last_tweet_analysis)
+			print(last_tweet_accounts)
+
+	except:
+		last_tweet_text, last_tweet_id, last_tweet_screen_name, last_tweet_analysis = initial_search(main_account)
+		continue
+
+	time.sleep(10)
