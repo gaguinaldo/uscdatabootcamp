@@ -65,6 +65,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Public API List 4](https://any-api.com/)
 * [Git Command Line Tutorial](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html)
 * [List of named laws (random...)](https://www.wikiwand.com/en/List_of_eponymous_laws#)
+* [Using Loops to Create Subplots](http://jonathansoma.com/lede/data-studio/classes/small-multiples/long-explanation-of-using-plt-subplots-to-create-small-multiples/)
 
 ***
 
