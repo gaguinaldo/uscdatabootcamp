@@ -66,8 +66,9 @@ These are some of the resources that I found useful for the bootcamp.
 * [Git Command Line Tutorial](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html)
 * [List of named laws (random...)](https://www.wikiwand.com/en/List_of_eponymous_laws#)
 * [Using Loops to Create Subplots](http://jonathansoma.com/lede/data-studio/classes/small-multiples/long-explanation-of-using-plt-subplots-to-create-small-multiples/)
-* [Asking questions that can be answered with data](https://docs.microsoft.com/en-us/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
-* [Questions to ask a data scientist](https://hbr.org/2016/11/better-questions-to-ask-your-data-scientists)
+* [MS - Asking questions that can be answered with data](https://docs.microsoft.com/en-us/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
+* [HBR - Questions to ask a data scientist](https://hbr.org/2016/11/better-questions-to-ask-your-data-scientists)
+* [Quora - Asking good data science questions](https://www.quora.com/How-do-you-ask-good-Data-Science-questions)
 
 ***
 
