@@ -69,6 +69,9 @@ These are some of the resources that I found useful for the bootcamp.
 * [MS - Asking questions that can be answered with data](https://docs.microsoft.com/en-us/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers)
 * [HBR - Questions to ask a data scientist](https://hbr.org/2016/11/better-questions-to-ask-your-data-scientists)
 * [Quora - Asking good data science questions](https://www.quora.com/How-do-you-ask-good-Data-Science-questions)
+* [Data School Web Scraping](http://www.dataschool.io/python-web-scraping-of-president-trumps-lies/)
+* [Data Camp Web Scraping](https://www.datacamp.com/community/tutorials/web-scraping-python-nlp)
+* [Data Quest Web Scraping](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
 
 ***
 
