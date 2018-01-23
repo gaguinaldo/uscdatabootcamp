@@ -72,6 +72,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Data School Web Scraping](http://www.dataschool.io/python-web-scraping-of-president-trumps-lies/)
 * [Data Camp Web Scraping](https://www.datacamp.com/community/tutorials/web-scraping-python-nlp)
 * [Data Quest Web Scraping](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
+* [Stanford NLP Lectures](https://www.youtube.com/watch?v=nfoudtpBV68&list=PL6397E4B26D00A269)
 
 ***
 
