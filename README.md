@@ -38,6 +38,41 @@ Fetch changes in forked repo to your local computer
 Push to the changes in the original forked report to your github account: github.com/you/coolgame	
 
 ***
+# Github Pull and Merge Workflow for Teams (in progress) 
+
+Source:  [LearnCode Academy](https://www.youtube.com/watch?v=oFYyTZwMyAg&t=187s)
+
+Always merge to master, don't edit on the master branch.
+
+`git branch [BRANCH NAME]` This names a new branch
+
+`git checkout [BRANCH NAME]` This switches to the new brach.
+
+Make changes to the files on the new branch and save them.
+
+`git add .`
+`git commit -a -m '[ADD MESSAGE]`  This commits changes to the files to the new branch
+
+If you switch back to master, you will not see the change made to the branch. You will only see the changes made to the new branch by being on that branch. 
+
+Now you'll need to push the changes from the new branch into the master branch and delete the new branch. 
+
+Change back to the master branch.
+
+`git checkout master`
+
+Once in the master branch, you'll need to merge the changes from the new branch into the master branch.
+
+`git merge [BRANCH NAME]`
+
+Delete old branch.
+
+`git branch -D [BRANCH NAME]`
+
+`git branch` shows all of the branches
+`git pull` to be sure that master has not changed while you have been working on the code. 
+
+***
 # Natural Language Processing Libraries
 * [NLTK](http://www.nltk.org/)
 * [TextBlob](http://textblob.readthedocs.io/en/dev/)
