@@ -149,6 +149,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Using Flask Blueprints](https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files)
 * [UC Irvine Machine Learning Datasets](https://archive.ics.uci.edu/ml/datasets.html)
 * [Git workflow for teams](https://youtu.be/oFYyTZwMyAg)
+* [Principal Component Analysis via Analytics University](https://www.youtube.com/watch?v=W7b4NkkyROE&list=PLUgZaFoyJafhbfL3-kOREkql5aZzkmbUw&index=3)
 
 ***
 
