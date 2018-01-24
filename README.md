@@ -16,26 +16,26 @@ Check remotes.
 1. `git remote -v`
 
 Points to the original repo on github.
-1. `git remote add upstream [ADD ADDRESS OF REPO]`
+2. `git remote add upstream [ADD ADDRESS OF REPO]`
 
 Check that the upstream branch has added.
-1. `git remote -v`
+3. `git remote -v`
 
 Fetch updated (original) repo on github and clone to local computer
-1. `git fetch upstream`
+4. `git fetch upstream`
 
 Merge upstream/master branch to your working branch.
-1. `git merge upstream/master`
+5. `git merge upstream/master`
 
 Commit all changes to your working branch.
-1. `git commit -a -m '[ADD MESSAGE]`
+6. `git commit -a -m '[ADD MESSAGE]`
 
 Push all changes to your github account.
-1. `git push origin master`
+7. `git push origin master`
 
-github.com/joe/coolgame
-Fetch to local computer
-Push to github.com/you/coolgame	
+Original Forked Repo:  github.com/joe/coolgame
+Fetch changes in forked repo to your local computer
+Push to the changes in the original forked report to your github account: github.com/you/coolgame	
 
 ***
 # Natural Language Processing Libraries
