@@ -2,6 +2,42 @@
 This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp and a few resources that I found helpful. 
 
 ***
+# Github Fetch and Push to sync your repo with a forked repo
+
+Source: [Dataschool](https://www.youtube.com/watch?v=-zvHQXnBO6c&index=9&list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD)
+
+How to Fetch a repo and push to your repo.  Use this in order to update your repo with the changes made to the original (forked) repo. 
+
+github.com/joe/coolgame
+fetch to local computer
+Push to github.com/you/coolgame	
+
+Check remotes.
+1. `git remote -v`
+
+Points to the original repo on github.
+1. `git remote add upstream [ADD ADDRESS OF REPO]`
+
+Check that the upstream branch has added.
+1. `git remote -v`
+
+Fetch updated (original) repo on github and clone to local computer
+1. `git fetch upstream`
+
+Merge upstream/master branch to your working branch.
+1. `git merge upstream/master`
+
+Commit all changes to your working branch.
+1. `git commit -a -m '[ADD MESSAGE]`
+
+Push all changes to your github account.
+1. `git push origin master`
+
+github.com/joe/coolgame
+Fetch to local computer
+Push to github.com/you/coolgame	
+
+***
 # Natural Language Processing Libraries
 * [NLTK](http://www.nltk.org/)
 * [TextBlob](http://textblob.readthedocs.io/en/dev/)
