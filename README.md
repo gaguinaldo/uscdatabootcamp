@@ -13,25 +13,25 @@ fetch to local computer
 Push to github.com/you/coolgame	
 
 Check remotes.
-1. `git remote -v`
+* 1. `git remote -v`
 
 Points to the original repo on github.
-2. `git remote add upstream [ADD ADDRESS OF REPO]`
+* 2. `git remote add upstream [ADD ADDRESS OF REPO]`
 
 Check that the upstream branch has added.
-3. `git remote -v`
+* 3. `git remote -v`
 
 Fetch updated (original) repo on github and clone to local computer
-4. `git fetch upstream`
+* 4. `git fetch upstream`
 
 Merge upstream/master branch to your working branch.
-5. `git merge upstream/master`
+* 5. `git merge upstream/master`
 
 Commit all changes to your working branch.
-6. `git commit -a -m '[ADD MESSAGE]`
+* 6. `git commit -a -m '[ADD MESSAGE]`
 
 Push all changes to your github account.
-7. `git push origin master`
+* 7. `git push origin master`
 
 Original Forked Repo:  github.com/joe/coolgame
 Fetch changes in forked repo to your local computer
