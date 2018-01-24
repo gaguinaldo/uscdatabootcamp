@@ -76,6 +76,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [DataSchool Machine Learning With Text PyCon 2016](https://youtu.be/ZiKMIuYidY0)
 * [Explanation of TF-IDF](https://planspace.org/20150524-tfidf_is_about_what_matters/)
 * [Using Flask Blueprints](https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files)
+* [UC Irvine Machine Learning Datasets](https://archive.ics.uci.edu/ml/datasets.html)
 
 ***
 
