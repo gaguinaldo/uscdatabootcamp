@@ -75,6 +75,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Stanford NLP Lectures](https://www.youtube.com/watch?v=nfoudtpBV68&list=PL6397E4B26D00A269)
 * [DataSchool Machine Learning With Text PyCon 2016](https://youtu.be/ZiKMIuYidY0)
 * [Explanation of TF-IDF](https://planspace.org/20150524-tfidf_is_about_what_matters/)
+* [Using Flask Blueprints](https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files)
 
 ***
 
