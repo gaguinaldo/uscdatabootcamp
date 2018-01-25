@@ -236,6 +236,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Principal Component Analysis via Analytics University](https://www.youtube.com/watch?v=W7b4NkkyROE&list=PLUgZaFoyJafhbfL3-kOREkql5aZzkmbUw&index=3)
 * [GTA Notebook about working with Files from Slack within the Bootcamp](https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/Misc_Files/2017-11-29%20Notes%20RE%20File%20Downloads.ipynb)
 * [Overview of SQL Joins](http://www.sql-join.com/sql-join-types/)
+* [Merging into master branch on Github](https://www.sap.com/developer/tutorials/webide-github-merge-pull-request.html)
 
 ***
 
