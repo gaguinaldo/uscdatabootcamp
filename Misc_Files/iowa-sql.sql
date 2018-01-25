@@ -111,3 +111,30 @@ WHERE category_name LIKE '%WHISK%' AND (CAST(bottle_price AS DECIMAL) BETWEEN 10
 SELECT DISTINCT item_description
 FROM products
 WHERE category_name NOT LIKE '%TEQUILA%' AND (CAST(bottle_price AS DECIMAL) BETWEEN 100 AND 120)
+
+/* From the Iowa Liquor Database I only want information about vendor 305. Can you get me the bottle price and proof? Price should be less than 5 OR the proof is greater than 100, either is fine. */
+
+/* Price less than 5 */
+SELECT *
+FROM products
+where vendor = 305 AND (CAST(bottle_price AS DECIMAL) < 5)
+
+/* Proof greater than 100 */
+SELECT *
+FROM products
+where vendor = 305  AND (CAST(proof AS INT) > 100)
+
+/* Find the item description with the highest and lowest total sales for each store.  */
+SELECT SUM(total) AS total_sales, description, store
+FROM sales
+GROUP BY description, store
+ORDER BY store
+
+/* Calculate the markup percentage for each item*/
+SELECT 
+description, 
+CAST(state_btl_cost AS DECIMAL), 
+CAST(btl_price AS DECIMAL),
+((CAST(btl_price AS DECIMAL) -  CAST(state_btl_cost AS DECIMAL)) / CAST(btl_price AS DECIMAL) ) * 100 as pct_markup
+FROM sales
+LIMIT 1000
