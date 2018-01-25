@@ -238,6 +238,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Overview of SQL Joins](http://www.sql-join.com/sql-join-types/)
 * [Merging into master branch on Github](https://www.sap.com/developer/tutorials/webide-github-merge-pull-request.html)
 * [Sean Lahman Baseball Dataset](http://www.seanlahman.com/baseball-archive/statistics/)
+* [Unions vs Joins](https://www.essentialsql.com/what-is-the-difference-between-a-join-and-a-union/)
 
 ***
 
