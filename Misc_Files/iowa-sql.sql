@@ -1,6 +1,8 @@
-/*
+/*********************************
 GRANT AGUINALDO
-*/
+SQL 
+Iowa Liquor Sales Database
+*********************************/
 
 -- Which products come in packs larger than 12?
 SELECT item_description
@@ -60,3 +62,52 @@ FROM products
 WHERE category_name LIKE '%CANA%'
 GROUP BY category_name, vendor_name
 ORDER BY ave_bottle_price ASC
+
+/* What is the sum of case_cost, shelf_price, and bottle_price per item_description for all scotch whiskies? For scotch whiskies and Canadian whiskies? */
+
+SELECT SUM(CAST(bottle_price AS decimal)) as sum_bottle, SUM(shelf_price) as sum_shelf, SUM(case_cost) as sum_case, category_name, item_description
+FROM products
+WHERE category_name LIKE '%SCOTCH%' 
+GROUP BY category_name, item_description
+ORDER BY item_description
+
+SELECT SUM(CAST(bottle_price AS decimal)) as sum_bottle, SUM(shelf_price) as sum_shelf, SUM(case_cost) as sum_case, category_name, item_description
+FROM products
+WHERE category_name LIKE '%SCOTCH%' OR category_name LIKE '%CANA%'
+GROUP BY category_name, item_description
+ORDER BY item_description
+
+/* Which products have a case cost of more than $100? */
+SELECT *
+FROM products
+WHERE case_cost > 100
+
+/* Which tequilas have a case cost of more than $100? */
+SELECT *
+FROM products
+WHERE category_name LIKE '%TEQUILA%' AND case_cost > 100
+
+/*Which tequilas or scotch whiskies have a case cost of more than $100? */
+SELECT *
+FROM products
+WHERE category_name LIKE '%TEQUILA%' OR category_name LIKE '%SCOTCH'
+
+/* Which tequilas or scotch whiskies have a case cost between $100 and $120? */
+SELECT *
+FROM products
+WHERE category_name LIKE '%TEQUILA%' OR category_name LIKE '%SCOTCH' AND (case_cost BETWEEN 100 AND 120)
+
+/* Which whiskies of any kind cost more than $100? */
+SELECT *
+FROM products
+WHERE category_name LIKE '%WHISK%' AND (case_cost > 100 OR shelf_price > 100 OR CAST(bottle_price AS DECIMAL) > 100)
+
+/* Which whiskies of any kind cost between $100 and $150? */
+SELECT DISTINCT item_description
+FROM products
+WHERE category_name LIKE '%WHISK%' AND (CAST(bottle_price AS DECIMAL) BETWEEN 100 AND 150)
+
+/* Which products except tequilas cost between $100 and $120? */
+SELECT DISTINCT item_description
+FROM products
+WHERE category_name NOT LIKE '%TEQUILA%' AND (CAST(bottle_price AS DECIMAL) BETWEEN 100 AND 120)
