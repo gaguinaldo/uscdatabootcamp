@@ -1,6 +1,8 @@
 # Resources and Helpful Links
 This repository contains all of the homework assignments for the October 2017 cohort of the USC Data Bootcamp and a few resources that I found helpful. 
 
+I will be continuously adding to this file.
+
 ***
 # Github Fetch and Push to sync your repo with a forked repo
 
@@ -8,34 +10,39 @@ Source: [Dataschool](https://www.youtube.com/watch?v=-zvHQXnBO6c&index=9&list=PL
 
 How to Fetch a repo and push to your repo.  Use this in order to update your repo with the changes made to the original (forked) repo. 
 
-github.com/joe/coolgame
-fetch to local computer
-Push to github.com/you/coolgame	
+The sequence of steps will be as follows:
+
+1. Original Forked Repo:  github.com/joe/coolgame
+2. Fetch changes in forked repo to your local computer
+3. Push to the changes in the original forked report to your github account: github.com/you/coolgame	
 
 Check remotes.
-* 1. `git remote -v`
+	
+	git remote -v
 
 Points to the original repo on github.
-* 2. `git remote add upstream [ADD ADDRESS OF REPO]`
+
+	git remote add upstream [ADDRESS OF REPO]
 
 Check that the upstream branch has added.
-* 3. `git remote -v`
+	
+	git remote -v
 
 Fetch updated (original) repo on github and clone to local computer
-* 4. `git fetch upstream`
+
+	git fetch upstream
 
 Merge upstream/master branch to your working branch.
-* 5. `git merge upstream/master`
+
+	git merge upstream/master
 
 Commit all changes to your working branch.
-* 6. `git commit -a -m '[ADD MESSAGE]`
+	
+	git commit -a -m '[ADD MESSAGE]
 
 Push all changes to your github account.
-* 7. `git push origin master`
 
-Original Forked Repo:  github.com/joe/coolgame
-Fetch changes in forked repo to your local computer
-Push to the changes in the original forked report to your github account: github.com/you/coolgame	
+	git push origin master
 
 ***
 # Github Pull and Merge Workflow for Teams (in progress) 
@@ -169,10 +176,12 @@ These are some of the resources that I found useful for the bootcamp.
 
 * [GitHub and Git Bash: Create Folders in a Repository](https://youtu.be/rVNFPj9jtb0)
 * [Adding multiple files to github.](https://stackoverflow.com/questions/19576116/how-to-add-multiple-files-to-git-at-the-same-time)
-	1. `git add .` 
-	2. `git status`
-	3. `git commit -a -m "MY MESSAGE HERE"` 
-	4. `git push origin master`
+		
+		git add . 
+		git status
+		git commit -a -m "MY MESSAGE HERE"
+		git push origin master
+		
 * [How do I add files and folders into GitHub repos?](https://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos)
 * [Markdown cheatsheet](http://assemble.io/docs/Cheatsheet-Markdown.html)
 * [Gitignore generator](https://www.gitignore.io/)
@@ -186,7 +195,9 @@ These are some of the resources that I found useful for the bootcamp.
 * [Quick Pandas Cheet Sheet](https://jeffdelaney.me/blog/useful-snippets-in-pandas/)
 * [Pandas Video Series (Data School)](http://www.dataschool.io/easier-data-analysis-with-pandas/)
 * [How to export an iPython Notebook into an .md file](https://github.com/jupyter/nbconvert)
-	`jupyter nbconvert --to markdown <input notebook include file extension>`
+	
+	`jupyter nbconvert --to markdown <input notebook include file 	extension>`
+	
 * [Jupyter Notebook Shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
 * [Jupyter Notebook Keyboard Shortcuts](http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html)
 * [Terminal Keyboard Shortcuts](https://gist.github.com/poopsplat/7195274)
@@ -223,6 +234,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [UC Irvine Machine Learning Datasets](https://archive.ics.uci.edu/ml/datasets.html)
 * [Git workflow for teams](https://youtu.be/oFYyTZwMyAg)
 * [Principal Component Analysis via Analytics University](https://www.youtube.com/watch?v=W7b4NkkyROE&list=PLUgZaFoyJafhbfL3-kOREkql5aZzkmbUw&index=3)
+* [GTA Notebook about working with Files from Slack within the Bootcamp](https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/Misc_Files/2017-11-29%20Notes%20RE%20File%20Downloads.ipynb)
 
 ***
 
