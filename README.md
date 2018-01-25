@@ -42,35 +42,108 @@ Push to the changes in the original forked report to your github account: github
 
 Source:  [LearnCode Academy](https://www.youtube.com/watch?v=oFYyTZwMyAg&t=187s)
 
-Always merge to master, don't edit on the master branch.
+## Clone Repo and Adding A Branch
 
-`git branch [BRANCH NAME]` This names a new branch
+These commands will create a working branch off of the master so that you can make changes.  All commits will be made to the branch and not the master. Once changes have been made and committed to the branch, a pull request will need to be made to start the process of merging the changes into the master branch. 
 
-`git checkout [BRANCH NAME]` This switches to the new brach.
+Finally, always merge to master, don't edit on the master branch.
 
-Make changes to the files on the new branch and save them.
+Clones the repo onto your desktop.
 
-`git add .`
-`git commit -a -m '[ADD MESSAGE]`  This commits changes to the files to the new branch
+	git clone [INSERT URL]
 
-If you switch back to master, you will not see the change made to the branch. You will only see the changes made to the new branch by being on that branch. 
+Change directory into the repo on your desktop
 
-Now you'll need to push the changes from the new branch into the master branch and delete the new branch. 
+	cd [NAME OF DIRECTORY]
+	
+Create and name new branch to work on.
 
-Change back to the master branch.
+	git branch [NAME BRANCH]
 
-`git checkout master`
+Change to the new branch so that you are able to work on your code.
 
-Once in the master branch, you'll need to merge the changes from the new branch into the master branch.
+	git checkout [NAME BRANCH]
 
-`git merge [BRANCH NAME]`
+Work on the files made in the directory and save them. 
+
+Adds all of the changes to be committed.
+
+	git add .
+	
+Check the status of the changes to see that all necessary files have been added 
+
+	git status
+
+Commit changes. 
+
+	git commit -a -m '[INSERT COMMENT]
+
+Push the change to the branch. 
+
+	git push origin [NAME BRANCH]
+
+Check that the branch has been updated. 
+
+	git branch 
+
+## Create a Pull Request and Merge Into Master
+
+Now that your branch has been updated, you will not need to prepare to merge your branch into the master branch.
+
+Switch to the master branch. 
+
+	git checkout master
+
+Pull the latest copy of the master branch down.
+
+	git pull
+	
+Change to your branch.
+
+	git checkout [NAME BRANCH]
+
+Merge the master branch into your branch.
+
+	git merge master
+
+#### Make changes to the code if conflicts are found. 
+
+Check status.
+
+	git status
+
+Add all of the files to be committed. 
+	git add .
+
+Commit changes. 
+
+	git commit -a -m '[INSERT COMMENT]
+	
+Push the change to the branch. 
+
+	git push origin [NAME BRANCH]
+
+On the `github.com` UI, click button for Pull Request. 
+
+Work through all of the changes to gain acceptance.  Once all changes are accepted, click button to merge pull request into Master Brach. 
+
+Typically, the request to merge into the master branch is done by a peer. 
+
+
+## Miscellaneous Commands
 
 Delete old branch.
 
-`git branch -D [BRANCH NAME]`
+	git branch -D [BRANCH NAME]
 
-`git branch` shows all of the branches
-`git pull` to be sure that master has not changed while you have been working on the code. 
+
+Shows all of the branches
+ 	
+ 	git branch
+ 
+To be sure that master has not changed while you have been working on the code. 
+	
+	git pull 
 
 ***
 # Natural Language Processing Libraries
