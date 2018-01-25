@@ -42,9 +42,22 @@ WHERE store_status = 'I'
 /* 548 total stores are inactive*/
 
 /* What is the sum of case_cost, shelf_price, and bottle_price per item_description for all scotch whiskies? For scotch whiskies and Canadian whiskies? */
+SELECT SUM(CAST(bottle_price AS decimal)) as sum_bottle, SUM(shelf_price) as sum_shelf, SUM(case_cost) as sum_case, category_name, item_description
+FROM products
+WHERE category_name LIKE '%SCOTCH%' 
+GROUP BY category_name, item_description
+ORDER BY item_description
+
+SELECT SUM(CAST(bottle_price AS decimal)) as sum_bottle, SUM(shelf_price) as sum_shelf, SUM(case_cost) as sum_case, category_name, item_description
+FROM products
+WHERE category_name LIKE '%SCOTCH%' OR category_name LIKE '%CANA%'
+GROUP BY category_name, item_description
+ORDER BY item_description
+
 
 /* What is the average bottle price per vendor of Canadian whiskies? */
-SELECT COUNT(*)
+SELECT category_name, AVG(CAST(bottle_price AS decimal)) as ave_bottle_price, vendor_name
 FROM products
 WHERE category_name LIKE '%CANA%'
-/* 261 TOTAL LINES*/
+GROUP BY category_name, vendor_name
+ORDER BY ave_bottle_price ASC
