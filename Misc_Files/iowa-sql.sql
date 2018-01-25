@@ -54,7 +54,6 @@ WHERE category_name LIKE '%SCOTCH%' OR category_name LIKE '%CANA%'
 GROUP BY category_name, item_description
 ORDER BY item_description
 
-
 /* What is the average bottle price per vendor of Canadian whiskies? */
 SELECT category_name, AVG(CAST(bottle_price AS decimal)) as ave_bottle_price, vendor_name
 FROM products
