@@ -58,34 +58,143 @@ HAVING ct_last_name > 2;
 /* 4d. Perhaps we were too hasty in changing GROUCHO to HARPO. It turns out that GROUCHO was the correct name after all! In a single query, if the first name of the actor is currently HARPO, change it to GROUCHO. Otherwise, change the first name to MUCHO GROUCHO, as that is exactly what the actor will be with the grievous error. BE CAREFUL NOT TO CHANGE THE FIRST NAME OF EVERY ACTOR TO MUCHO GROUCHO, HOWEVER! (Hint: update the record using a unique identifier.) */
 
 /* 5a. You cannot locate the schema of the address table. Which query would you use to re-create it? */
+CREATE SCHEMA `[INSERT NAME OF SCHEMA]` 
 
-/* 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:*/ 
+/* 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address.  CHANGED to customers instead of staff*/
+SELECT first_name, last_name, address 
+FROM customer a
+INNER JOIN address b
+USING (address_id); 
 
 /* 6b. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment. */
+/* Total sales by sales person.*/
+SELECT first_name, last_name, sum(amount) AS sum_total_sales 
+FROM payment a
+INNER JOIN staff b
+USING (staff_id)
+GROUP BY first_name, last_name;
+
+SELECT first_name, last_name, sum(amount) as total_aug_sales
+FROM (
+	SELECT (EXTRACT(month FROM payment_date) = 8) as aug_flag, payment_date, staff_id, amount
+	FROM payment
+	WHERE (EXTRACT(month FROM payment_date) = 8) = 1
+	) as a
+INNER JOIN staff b
+USING (staff_id)
+GROUP BY first_name, last_name;
 
 /* 6c. List each film and the number of actors who are listed for that film. Use tables film_actor and film. Use inner join. */
+SELECT title, COUNT(actor_id) as num_actors
+FROM film_actor a
+INNER JOIN film b
+USING (film_id)
+GROUP BY title
+ORDER BY num_actors DESC;
 
-/* 6d. How many copies of the film Hunchback Impossible exist in the inventory system? */
+/* 6d. How many copies of the film  exist in the inventory system? */
+SELECT film_id 
+FROM film
+WHERE title = 'Hunchback Impossible';
 
-/* 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
+SELECT store_id, count(store_id) AS num_copies_of_Hunchback_Impossible 
+FROM inventory 
+WHERE film_id = 439
+GROUP BY store_id;
 
-    ![Total amount paid](Images/total_payment.png) */
+/* 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name: */
+
+SELECT customer_id, first_name, last_name, SUM(amount) 
+FROM payment a
+INNER JOIN customer b
+USING (customer_id)
+GROUP BY customer_id, first_name, last_name
+ORDER BY last_name ASC;
 
 /* 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English. */
+SELECT title
+FROM film
+WHERE (language_id = 1) AND (title LIKE 'K%' OR title LIKE 'Q%');
 
 /* 7b. Use subqueries to display all actors who appear in the film Alone Trip.*/
+SELECT film_id 
+FROM film
+WHERE title = 'Alone Trip';
+
+SELECT first_name, last_name, title
+FROM actor
+INNER JOIN (
+	SELECT title, actor_id
+	FROM film_actor a
+	INNER JOIN film b
+	USING (film_id)) as sub
+USING (actor_id)
+WHERE title = 'Alone Trip';
+
 
 /* 7c. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information. */
+SELECT first_name, last_name, email 
+FROM customer a
+INNER JOIN address b
+USING (address_id)
+WHERE city_id IN 
+	(
+	SELECT city_id
+	FROM city
+	WHERE country_id = 20
+	);
 
 /* 7d. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as famiy films. */
+select title 
+from film
+WHERE film_id IN (
+	SELECT film_id
+	FROM film_category
+	WHERE category_id IN (
+			SELECT category_id 
+			FROM category
+			WHERE name = 'Family'));
 
 /* 7e. Display the most frequently rented movies in descending order. */
+SELECT * FROM payment;
+SELECT * FROM rental;
+SELECT * FROM inventory;
 
-/* 7f. Write a query to display how much business, in dollars, each store brought in. */
+SELECT title, count(film_id) as num_times_rented 
+FROM inventory a
+INNER JOIN film b
+USING (film_id)
+GROUP BY title, film_id
+ORDER BY num_times_rented DESC;
+
+/* 7f. Write a query to display how much business, in dollars, each store brought in. */ 
+/* Note:  Only two stores */
+SELECT staff_id as store_num, SUM(amount)
+FROM payment
+GROUP BY staff_id;
 
 /* 7g. Write a query to display for each store its store ID, city, and country */
 
+SELECT store_id, address, city, country 
+FROM country e
+INNER JOIN (
+			SELECT store_id, address, city, country_id
+			FROM city c
+			INNER JOIN (
+						SELECT store_id, city_id, address_id, address
+						FROM store a
+						INNER JOIN address b
+						USING (address_id)) AS d
+			USING (city_id)) AS f
+USING (country_id);
+
 /* 7h. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.) */
+SELECT * FROM inventory;
+
+SELECT * 
+FROM payment a
+INNER JOIN rental b
+USING (rental_id);
 
 /* 8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view. */
 
