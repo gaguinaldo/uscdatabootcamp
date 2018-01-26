@@ -189,15 +189,94 @@ INNER JOIN (
 USING (country_id);
 
 /* 7h. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.) */
+SELECT * FROM category;
+SELECT * FROM film_category;
 SELECT * FROM inventory;
+SELECT * FROM payment;
+SELECT * FROM rental;
 
-SELECT * 
+
+SELECT inventory_id, film_id, category_id, name
+FROM inventory c
+INNER JOIN (
+	SELECT category_id, film_id, name
+	FROM film_category a
+	INNER JOIN category b
+	USING (category_id)
+) as d
+USING (film_id);
+
+
+SELECT rental_id, amount, inventory_id 
 FROM payment a
 INNER JOIN rental b
 USING (rental_id);
 
+SELECT SUM(amount) as tot_sales_cat, name
+FROM ( 
+		SELECT inventory_id, film_id, category_id, name
+		FROM inventory c
+		INNER JOIN (
+						SELECT category_id, film_id, name
+						FROM film_category a
+						INNER JOIN category b
+						USING (category_id)
+					) as d
+		USING (film_id)) as z
+INNER JOIN ( 
+
+				SELECT rental_id, amount, inventory_id 
+				FROM payment a
+				INNER JOIN rental b
+				USING (rental_id)
+			) as y
+USING (inventory_id)
+GROUP BY name
+ORDER BY tot_sales_cat DESC;
 /* 8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view. */
+SELECT * FROM category;
+SELECT * FROM film_category;
+SELECT * FROM inventory;
+SELECT * FROM payment;
+SELECT * FROM rental;
+
+SELECT * 
+FROM cat_film_id;
+
+CREATE VIEW cat_film_id AS;
+SELECT inventory_id, film_id, category_id, name
+FROM inventory c
+INNER JOIN (
+	SELECT category_id, film_id, name
+	FROM film_category a
+	INNER JOIN category b
+	USING (category_id)
+) as d
+USING (film_id);
+
+SELECT * 
+FROM inv_id_amount;
+
+CREATE VIEW inv_id_amount AS
+SELECT rental_id, amount, inventory_id 
+FROM payment a
+INNER JOIN rental b
+USING (rental_id);
+
+CREATE VIEW top_sales_by_category AS
+SELECT SUM(amount) AS tot_sales_category, name
+FROM inv_id_amount a 
+INNER JOIN cat_film_id b
+USING (inventory_id)
+GROUP BY name
+ORDER BY tot_sales_category DESC;
+
+SELECT * 
+FROM top_sales_by_category;
 
 /* 8b. How would you display the view that you created in 8a? */
+SELECT * 
+FROM top_sales_by_category;
 
 /* 8c. You find that you no longer need the view top_five_genres. Write a query to delete it.*/
+DROP VIEW top_sales_by_category;
