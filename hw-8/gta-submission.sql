@@ -1,3 +1,14 @@
+
+/*****************************************************
+GRANT AGUINALDO
+USC DATABOOTCAMP
+HOMEWORK 8
+SQL
+
+https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/hw-8/gta-submission.sql
+
+*****************************************************/
+
 /* 1a. Display the first and last names of all actors from the table actor. */
 SELECT first_name, last_name
 FROM actor;
@@ -54,8 +65,48 @@ GROUP BY last_name
 HAVING ct_last_name > 2;
 
 /* 4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpo's second cousin's husband's yoga teacher. Write a query to fix the record. */
+SELECT * 
+FROM actor
+WHERE actor_id = (	SELECT actor_id
+					FROM actor
+					WHERE first_name = 'GROUCHO' AND last_name = 'WILLIAMS'
+					);
+
+UPDATE actor
+SET first_name = 'HARPO'
+WHERE actor_id = 172;
 
 /* 4d. Perhaps we were too hasty in changing GROUCHO to HARPO. It turns out that GROUCHO was the correct name after all! In a single query, if the first name of the actor is currently HARPO, change it to GROUCHO. Otherwise, change the first name to MUCHO GROUCHO, as that is exactly what the actor will be with the grievous error. BE CAREFUL NOT TO CHANGE THE FIRST NAME OF EVERY ACTOR TO MUCHO GROUCHO, HOWEVER! (Hint: update the record using a unique identifier.) */
+SELECT *
+FROM actor
+WHERE first_name = 'GROUCHO';
+
+SELECT * 
+FROM actor
+WHERE actor_id = (	SELECT actor_id
+					FROM actor
+					WHERE first_name = 'GROUCHO' AND last_name = 'WILLIAMS'
+					);
+										
+UPDATE actor
+SET first_name = 'HARPO'
+WHERE actor_id = 172;
+
+SELECT *
+FROM actor
+WHERE first_name = 'GROUCHO';
+
+SELECT *
+FROM actor
+WHERE first_name = 'HARPO';
+
+UPDATE actor
+SET first_name = 'GROUCHO'
+WHERE actor_id = 172;
+
+SELECT *
+FROM actor
+WHERE first_name = 'GROUCHO';
 
 /* 5a. You cannot locate the schema of the address table. Which query would you use to re-create it? */
 CREATE SCHEMA `[INSERT NAME OF SCHEMA]` 
@@ -103,7 +154,6 @@ WHERE film_id = 439
 GROUP BY store_id;
 
 /* 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name: */
-
 SELECT customer_id, first_name, last_name, SUM(amount) 
 FROM payment a
 INNER JOIN customer b
@@ -130,7 +180,6 @@ INNER JOIN (
 	USING (film_id)) as sub
 USING (actor_id)
 WHERE title = 'Alone Trip';
-
 
 /* 7c. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information. */
 SELECT first_name, last_name, email 
@@ -174,7 +223,6 @@ FROM payment
 GROUP BY staff_id;
 
 /* 7g. Write a query to display for each store its store ID, city, and country */
-
 SELECT store_id, address, city, country 
 FROM country e
 INNER JOIN (
@@ -233,6 +281,7 @@ INNER JOIN (
 USING (inventory_id)
 GROUP BY name
 ORDER BY tot_sales_cat DESC;
+
 /* 8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view. */
 SELECT * FROM category;
 SELECT * FROM film_category;
