@@ -259,6 +259,14 @@ These are some of the resources that I found useful for the bootcamp.
 
 ***
 
+###
+
+Need to find more resources on:
+* Bash and using command line
+* Matplotlib and plotting
+* Asking questions
+* Reading documentation
+
 ### Online Resources for learning python (from Learn Code Teach LA)
 + The Hitchhiker's Guide to Python - one of the best guides out there. It covers everything from installation to common modules and writing great code. It is highly recommended for novices as well as advanced Pythonistas.
 
