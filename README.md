@@ -255,6 +255,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Python Classes](https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/)
 * ['Beefs' about using Python classes](https://youtu.be/o9pEzgHorH0)
 * [Hacker Rank Developer Survey 2018](https://research.hackerrank.com/developer-skills/2018/)
+* [Asking Good Questions](https://stackoverflow.com/help/how-to-ask)
 
 ***
 
