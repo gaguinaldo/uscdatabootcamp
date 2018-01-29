@@ -153,6 +153,11 @@ To be sure that master has not changed while you have been working on the code.
 	git pull 
 
 ***
+# Frameworks
+* [SQL Alchemy](https://www.sqlalchemy.org/)
+* [Flask](http://flask.pocoo.org/) 
+* [Django](https://www.djangoproject.com/)
+
 # Natural Language Processing Libraries
 * [NLTK](http://www.nltk.org/)
 * [TextBlob](http://textblob.readthedocs.io/en/dev/)
