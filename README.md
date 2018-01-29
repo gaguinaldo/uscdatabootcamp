@@ -242,6 +242,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [SQL Subqueries](https://community.modeanalytics.com/sql/tutorial/sql-subqueries/)
 * [Using Flask and SQL Alchemy](https://youtu.be/Tu4vRU4lt6k)
 * [SQL Alchemy Documentation](http://docs.sqlalchemy.org/en/latest/core/engines.html)
+* [Python Classes tutorial](https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)
+* How to show all tables in a SQL database `SHOW tables`
 
 ***
 
