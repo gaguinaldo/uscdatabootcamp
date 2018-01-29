@@ -240,6 +240,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [Sean Lahman Baseball Dataset](http://www.seanlahman.com/baseball-archive/statistics/)
 * [SQL Unions vs Joins](https://www.essentialsql.com/what-is-the-difference-between-a-join-and-a-union/)
 * [SQL Subqueries](https://community.modeanalytics.com/sql/tutorial/sql-subqueries/)
+* [Using Flask and SQL Alchemy](https://youtu.be/Tu4vRU4lt6k)
+* [SQL Alchemy Documentation](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
 ***
 
