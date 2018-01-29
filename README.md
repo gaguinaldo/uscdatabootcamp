@@ -244,6 +244,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [SQL Alchemy Documentation](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 * [Python Classes tutorial](https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)
 * How to show all tables in a SQL database `SHOW tables`
+* [Object Relational Mapping](https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it)
+* [ACID Database properties](https://www.wikiwand.com/en/ACID)
 
 ***
 
