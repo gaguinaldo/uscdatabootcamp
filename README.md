@@ -256,6 +256,7 @@ These are some of the resources that I found useful for the bootcamp.
 * ['Beefs' about using Python classes](https://youtu.be/o9pEzgHorH0)
 * [Hacker Rank Developer Survey 2018](https://research.hackerrank.com/developer-skills/2018/)
 * [Asking Good Questions](https://stackoverflow.com/help/how-to-ask)
+* [Project Euler](https://projecteuler.net/)
 
 ***
 
@@ -266,6 +267,8 @@ Need to find more resources on:
 * Matplotlib and plotting
 * Asking questions
 * Reading documentation
+* Installing themes for iTerm2 and Terminal
+* Using git in a team setting
 
 ### Online Resources for learning python (from Learn Code Teach LA)
 + The Hitchhiker's Guide to Python - one of the best guides out there. It covers everything from installation to common modules and writing great code. It is highly recommended for novices as well as advanced Pythonistas.
