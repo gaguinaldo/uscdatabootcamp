@@ -80,6 +80,8 @@ engine = create_engine(end_point)
 
 conn = engine.connect()
 
+Base.metadata.create_all(engine)
+
 from sqlalchemy.orm import Session
 session = Session(bind=engine)
 
