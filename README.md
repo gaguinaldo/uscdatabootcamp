@@ -260,6 +260,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Python Class Internals](https://rushter.com/blog/python-class-internals/)
 * [Cannot Start Jupyter Notebook Solutions](https://github.com/jupyter/help/issues/136)
 * [Python Sheets](https://www.pythonsheets.com/)
+* [djangogirls tutorial](https://tutorial.djangogirls.org/en/)
 
 ***
 
