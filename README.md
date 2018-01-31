@@ -259,6 +259,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Project Euler](https://projecteuler.net/)
 * [Python Class Internals](https://rushter.com/blog/python-class-internals/)
 * [Cannot Start Jupyter Notebook Solutions](https://github.com/jupyter/help/issues/136)
+* [Python Sheets](https://www.pythonsheets.com/)
 
 ***
 
