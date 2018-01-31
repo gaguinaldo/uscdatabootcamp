@@ -257,6 +257,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Hacker Rank Developer Survey 2018](https://research.hackerrank.com/developer-skills/2018/)
 * [Asking Good Questions](https://stackoverflow.com/help/how-to-ask)
 * [Project Euler](https://projecteuler.net/)
+* [Python Class Internals](https://rushter.com/blog/python-class-internals/)
 
 ***
 
