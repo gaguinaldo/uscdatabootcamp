@@ -261,6 +261,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Cannot Start Jupyter Notebook Solutions](https://github.com/jupyter/help/issues/136)
 * [Python Sheets](https://www.pythonsheets.com/)
 * [djangogirls tutorial](https://tutorial.djangogirls.org/en/)
+* [Tuple Unpacking](https://www.pythonlearn.com/html-008/cfbook011.html)
 
 ***
 
