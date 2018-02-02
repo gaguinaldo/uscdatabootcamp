@@ -262,6 +262,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Python Sheets](https://www.pythonsheets.com/)
 * [djangogirls tutorial](https://tutorial.djangogirls.org/en/)
 * [Tuple Unpacking](https://www.pythonlearn.com/html-008/cfbook011.html)
+* [Everything about Machine Learning](https://youtu.be/ZKrO71KQ9NY)
 
 ***
 
