@@ -263,6 +263,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [djangogirls tutorial](https://tutorial.djangogirls.org/en/)
 * [Tuple Unpacking](https://www.pythonlearn.com/html-008/cfbook011.html)
 * [Everything about Machine Learning](https://youtu.be/ZKrO71KQ9NY)
+* [HMTL Code Validator](https://validator.w3.org/#validate_by_uri)
 
 ***
 
