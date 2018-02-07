@@ -264,6 +264,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Tuple Unpacking](https://www.pythonlearn.com/html-008/cfbook011.html)
 * [Everything about Machine Learning](https://youtu.be/ZKrO71KQ9NY)
 * [HMTL Code Validator](https://validator.w3.org/#validate_by_uri)
+* [Clases vs Ids in CSS](https://stackoverflow.com/questions/12889362/difference-between-id-and-class-in-css-and-when-to-use-it)
 
 ***
 
