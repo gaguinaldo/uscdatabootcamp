@@ -38,7 +38,7 @@ Merge upstream/master branch to your working branch.
 
 Commit all changes to your working branch.
 	
-	git commit -a -m '[ADD MESSAGE]
+	git commit -a -m '[ADD MESSAGE]'
 
 Push all changes to your github account.
 
