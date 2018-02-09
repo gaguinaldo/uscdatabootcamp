@@ -20,11 +20,9 @@ session = Session(engine)
 @app.route('/api/v1.0/stations')
 def stations():
 
-    active_query = session.query(Hawaii.station, func.count(Hawaii.tobs)).group_by(Hawaii.station).order_by(Hawaii.tobs.desc()).all()
+    results = list(np.ravel(session.query(Hawaii.name).distinct().all()))
 
-    df_dict = pd.DataFrame(active_query, columns={'station_name', 'count'}).set_index('station_name').to_dict()
-
-    return jsonify(df_dict)
+    return jsonify(results)
 
 
 if __name__ == "__main__":

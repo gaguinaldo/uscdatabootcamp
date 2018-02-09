@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+import datetime as dt
 import numpy as np
 import sqlalchemy
 import pandas as pd
@@ -17,14 +17,17 @@ Hawaii = Base.classes.hawaii_data
 session = Session(engine)
 
 
-@app.route('/api/v1.0/stations')
-def stations():
+@app.route('/api/v1.0/tobs')
+def tobs():
 
-    active_query = session.query(Hawaii.station, func.count(Hawaii.tobs)).group_by(Hawaii.station).order_by(Hawaii.tobs.desc()).all()
+    temp_query = session.query(Hawaii.tobs).filter(Hawaii.date_format >= (dt.date.today() - dt.timedelta(days=365))).all()
 
-    df_dict = pd.DataFrame(active_query, columns={'station_name', 'count'}).set_index('station_name').to_dict()
+    flat_temp = list(np.ravel(temp_query))
 
-    return jsonify(df_dict)
+    return jsonify(flat_temp)
+
+    #   Produces an error that reads 'TypeError: Object of type 'int64' is not JSON serializable'
+    #   https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/Misc_Files/app_temp_error_2.pdf
 
 
 if __name__ == "__main__":
