@@ -20,14 +20,16 @@ session = Session(engine)
 @app.route('/api/v1.0/tobs')
 def tobs():
 
-    temp_query = session.query(Hawaii.tobs).filter(Hawaii.date_format >= (dt.date.today() - dt.timedelta(days=365))).all()
+    temp_query = session.query(Hawaii.date_format, Hawaii.tobs).filter(Hawaii.date_format >= '2016-08-23', Hawaii.date_format <= '2017-08-23').all()
+    temp_df = pd.DataFrame(temp_query).rename(columns={'tobs': 'temperature_observations'})
+    temp_df['temperature_observations'] = temp_df['temperature_observations'].astype(float)
+    temp_df['date_format'] = temp_df['date_format'].astype(str)
 
-    flat_temp = list(np.ravel(temp_query))
+    new_df = temp_df.set_index('date_format')
 
-    return jsonify(flat_temp)
+    temp_dic = new_df.to_dict()
 
-    #   Produces an error that reads 'TypeError: Object of type 'int64' is not JSON serializable'
-    #   https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/Misc_Files/app_temp_error_2.pdf
+    return jsonify(temp_dic)
 
 
 if __name__ == "__main__":
