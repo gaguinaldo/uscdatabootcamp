@@ -1,3 +1,5 @@
+### General Notes on SQLAlchemy and Flask
+
 Updated tables using sqlalchemy (	`session.query(`, `session.commit`)
 
 Completed query using sqlalchemy orm (use of `.filter` and `.filter_by`)
