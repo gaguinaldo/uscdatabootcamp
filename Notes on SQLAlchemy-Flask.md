@@ -4,6 +4,8 @@ In general, sqlalchemy, is a framework that is used to work with sql databases u
 
 Further, using sqlchemy, it is possible to query a database and send the data directly into a pandas dataframe for further analysis.  In addition, it is also possible to use sqlalchemy and the Flask web framework to develop APIs that can be used to provide data to other end users. 
 
+Sqlalchemy is an ORM and more infomration about an ORM can be found [here](https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it).
+
 ***
 
 Updated tables using sqlalchemy (	`session.query(`, `session.commit`)
