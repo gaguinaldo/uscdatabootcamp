@@ -1,5 +1,9 @@
 ### General Notes on SQLAlchemy and Flask
 
+In general, sqlalchemy, is a framework that is used to work with sql databases using python.  
+
+***
+
 Updated tables using sqlalchemy (	`session.query(`, `session.commit`)
 
 Completed query using sqlalchemy orm (use of `.filter` and `.filter_by`)
