@@ -266,6 +266,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [HMTL Code Validator](https://validator.w3.org/#validate_by_uri)
 * [Clases vs Ids in CSS](https://stackoverflow.com/questions/12889362/difference-between-id-and-class-in-css-and-when-to-use-it)
 * [Socratic Selling](http://www.brefigroup.co.uk/acrobat/socratic_selling.pdf)
+* __Notes RE MongoDB:__ When starting Mongodb, you need to have two screens open in terminal.  The first, will run the server and the second will run the client.  To start the server use the command, `mongod` followed by enter.  To start the client, use the command `mongo`.  It is very important that you shut down the mongodb server when you are done by pressing `contol + c`.  Do not use `control + z` since that will not completly shut down the server. When using Mongo Compass, you can start the compass once the server is running on the local host.  If the connection is there, then Mongo compass will automatically connect to the server. 
+* [Creating a new database using PyMongo](https://stackoverflow.com/questions/8566618/how-do-i-create-a-new-database-in-mongodb-using-pymongo)
 
 ***
 
