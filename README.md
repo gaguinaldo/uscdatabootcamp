@@ -200,6 +200,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Quick Pandas Cheet Sheet](https://jeffdelaney.me/blog/useful-snippets-in-pandas/)
 * [Pandas Video Series (Data School)](http://www.dataschool.io/easier-data-analysis-with-pandas/)
 * [How to export an iPython Notebook into an .md file](https://github.com/jupyter/nbconvert)
+* [Check if MongoDB is running on your Mac](https://stackoverflow.com/questions/31561098/how-to-check-if-mongo-db-is-running-on-mac)
 	
 	`jupyter nbconvert --to markdown <input notebook include file 	extension>`
 	
