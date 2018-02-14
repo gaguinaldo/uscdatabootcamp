@@ -271,6 +271,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [Creating a new database using PyMongo](https://stackoverflow.com/questions/8566618/how-do-i-create-a-new-database-in-mongodb-using-pymongo)
 * [Notes about installing Mongodb on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
 * [Adding Sublime Shortcut to Command Line](https://medium.com/@talialongname/shortcut-to-opening-a-file-in-sublime-from-the-command-line-68c015a29627)
+* `source ~/.zshrc` reloads zshrc file once modifications have been saved.
+* `open ~/.zshrc` opens zshrc file to make modifications.
 
 ***
 
