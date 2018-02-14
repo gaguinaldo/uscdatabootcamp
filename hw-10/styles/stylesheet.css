@@ -1,0 +1,39 @@
+h1 {
+ color: green;
+
+}
+
+.row {
+    padding: 20px;
+}
+
+.col-sm-8 {
+    background-color: #FFFFFF;
+
+
+}
+
+.col-sm-4 {
+    background-color: #FFFFFF;
+
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #808080;
+    color: white;
+    text-align: center;
+}
+
+
+body {
+    background-color: #D0D0D0;
+}
+
+.navbar navbar-inverse nav navbar-nav li {
+
+    display: inline-block;
+}
