@@ -18,6 +18,11 @@ h1 {
 
 }
 
+
+.col-md-6 {
+    background-color: #FFFFFF;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -26,6 +31,7 @@ h1 {
     background-color: #808080;
     color: white;
     text-align: center;
+    font-size: 12px;
 }
 
 
@@ -36,4 +42,10 @@ body {
 .navbar navbar-inverse nav navbar-nav li {
 
     display: inline-block;
+}
+
+.imageClip{
+    width:30%;
+    height: auto;
+    overflow:hidden;
 }
