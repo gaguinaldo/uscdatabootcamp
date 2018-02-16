@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Homework 10</title>
 
@@ -8,34 +9,38 @@
     <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
 
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Homework 10:  Weather Dashboard</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="comparisons.html">Comparisons</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="data.html">Data</a>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="plots.html">Pots</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="./index.html">Homework 10</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Plots</a>
+                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+
+                    <a class="dropdown-item" href="./temp.html">Latitude vs. Max Temperature</a>
+                    <a class="dropdown-item" href="./humidity.html">Latitude vs. Humidity</a>
+                    <a class="dropdown-item" href="./clouds.html">Latitude vs. Cloudiness</a>
+                    <a class="dropdown-item" href="./wind.html">Latitude vs. Wind Speed</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./comp.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./data.html">Data</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
 
 
 
@@ -43,11 +48,11 @@
 
         <div class="row">
           <div class="col-sm-8">
-            <h1>Max Temperature</h1>
+            <h1>Summary:  Latitude vs. Humidity</h1>
             <hr>
             <p>
 
-                <center><img src="assets/testImage500.jpg" alt='Image 1', width="500" height="500"></center>
+                <center><img src="assets/humidity.png" alt='Image 1', width="500" height="500"></center>
                 <br>
                 <br>
                 The purpose of this project was to analyze how weather changes as you get closer to the equator.  To accomplish this analaysi, we first pulled data from the OpenWeatherMap API to asseble a dataset on over 500 cities.
@@ -59,14 +64,58 @@
             </p>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 rightSideBar">
             <h1>Visualizations</h1>
             <hr>
-            <p>
-                After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.  Factors we looked at incldued: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as the explaintion and discriptions of any trends and correleations witnessed.
-            </p>
 
+              <div class="container">
+                <div class="row">
+                  <div class="span6">
+
+                    <div class="row">
+                      <div class="span6">
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="./assets/temperature.png" alt="Maximum Temperature">
+                            <div class="card-body">
+                              <p class="card-text">Maximum Temperature Charts</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="span6">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="./assets/humidity.png" alt="Humidity">
+                          <div class="card-body">
+                            <p class="card-text">Humidity Charts</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="span6">
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="./assets/windspeed.png" alt="Wind Speed">
+                            <div class="card-body">
+                              <p class="card-text">Wind Speed Charts</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="span6">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="./assets/clouds.png" alt="Cloud Cover">
+                          <div class="card-body">
+                            <p class="card-text">Cloud Cover Charts</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
+
+
+          <!-- This is the footer-->
 
           <div class='footer'>
               <p>
@@ -74,6 +123,17 @@
               </p>
           </div>
 
-    </div>
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </body>
 </html>

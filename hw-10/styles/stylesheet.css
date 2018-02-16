@@ -37,6 +37,12 @@ h1 {
 
 body {
     background-color: #D0D0D0;
+    margin-bottom: 30px;
+}
+
+#main {
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 .navbar navbar-inverse nav navbar-nav li {
@@ -48,4 +54,8 @@ body {
     width:30%;
     height: auto;
     overflow:hidden;
+}
+
+.col-md-4 rightSideBar {
+    background-color: #FFFFFF;
 }

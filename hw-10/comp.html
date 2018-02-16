@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homework 10</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+
+</head>
+
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="./index.html">Homework 10</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Plots</a>
+                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+
+                    <a class="dropdown-item" href="./temp.html">Latitude vs. Max Temperature</a>
+                    <a class="dropdown-item" href="./humidity.html">Latitude vs. Humidity</a>
+                    <a class="dropdown-item" href="./clouds.html">Latitude vs. Cloudiness</a>
+                    <a class="dropdown-item" href="./wind.html">Latitude vs. Wind Speed</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./comp.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./data.html">Data</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+
+
+  <!-- This is the datatable-->
+    <div id='main' class='container'>
+      <div class="col-sm-12">
+        <h1>Comparisons</h1>
+          <hr>
+
+            <p>
+              Click on any of the images below to get a more detailed analysis.
+            </p>
+
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="./assets/clouds.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Latitude vs Cloud Cover</h4>
+                    <p class="card-text">An analysis of the cloud cover as a function of latitude.</p>
+                    <a href="./clouds.html" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="./assets/temperature.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Latitude vs Maximum Temperature</h4>
+                    <p class="card-text">An analysis of the maximum temperature as a function of latitude.</p>
+                    <a href="./temp.html" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+
+               <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="./assets/humidity.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Latitude vs Humidity</h4>
+                    <p class="card-text">An analysis of the humidity as a function of latitude.</p>
+                    <a href="./humidity.html" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+               </div>
+
+               <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="./assets/windspeed.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Latitude vs Windspeed</h4>
+                    <p class="card-text">An analysis of the windspeed as a function of latitude.</p>
+                    <a href="./wind.html" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+               </div>
+
+             </div>
+
+
+
+      </div>
+
+  <!-- This is the footer-->
+      <div class='footer'>
+          <p>
+              Uncopyright: Grant T. Aguinaldo 2018
+          </p>
+      </div>
+
+  <!-- Javascript Links-->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
