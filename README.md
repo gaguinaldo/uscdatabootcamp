@@ -273,6 +273,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Adding Sublime Shortcut to Command Line](https://medium.com/@talialongname/shortcut-to-opening-a-file-in-sublime-from-the-command-line-68c015a29627)
 * `source ~/.zshrc` reloads zshrc file once modifications have been saved.
 * `open ~/.zshrc` opens zshrc file to make modifications.
+* [Importing and working with files in python] (https://www.youtube.com/watch?v=CqvZ3vGoGs0)
 
 ***
 
