@@ -174,6 +174,8 @@ To be sure that master has not changed while you have been working on the code.
 * [Sublime Text](https://www.sublimetext.com/3)
 * [atom multi cursor](https://atom.io/packages/multi-cursor)
 * [oy-my-zsh terminal themes](https://github.com/robbyrussell/oh-my-zsh)
+* [Homebrew pacakge installer](https://brew.sh/)
+* [Anaconda](https://anaconda.org/)
 
 ***
 
@@ -276,6 +278,7 @@ These are some of the resources that I found useful for the bootcamp.
 * `open ~/.zshrc` opens zshrc file to make modifications.
 * [Importing and working with files in python](https://www.youtube.com/watch?v=CqvZ3vGoGs0)
 * If you want to see the location of a certain module, you can run `which chromedriver` from command line.  When doing so, terminal will respond with the location of the module.  In this case, the response was `/usr/local/bin/chromedriver`.
+* When installing Python packages, there are three main ways to install a package.  You can use `pip install <package>`, `conda install <package>` or `brew install <package>`.  Depending on where the package is hosted, will depend on which installer you use.  Some packages are found within `brew` and not in `pip` or `conda`.  Therefore, it is best to try one and then reserach the proper method of the package cannot be installed. 
 
 ***
 
