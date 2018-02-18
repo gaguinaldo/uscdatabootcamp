@@ -279,6 +279,9 @@ These are some of the resources that I found useful for the bootcamp.
 * [Importing and working with files in python](https://www.youtube.com/watch?v=CqvZ3vGoGs0)
 * If you want to see the location of a certain module, you can run `which chromedriver` from command line.  When doing so, terminal will respond with the location of the module.  In this case, the response was `/usr/local/bin/chromedriver`.
 * When installing Python packages, there are three main ways to install a package.  You can use `pip install <package>`, `conda install <package>` or `brew install <package>`.  Depending on where the package is hosted, will depend on which installer you use.  Some packages are found within `brew` and not in `pip` or `conda`.  Therefore, it is best to try one and then reserach the proper method of the package cannot be installed. 
+* [Command line basics](https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c)
+* [Git basics](https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx)
+* [Using oh-my-zsh](https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb)
 
 ***
 
