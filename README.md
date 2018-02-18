@@ -173,6 +173,7 @@ To be sure that master has not changed while you have been working on the code.
 * [macdown](https://macdown.uranusjr.com/)
 * [Sublime Text](https://www.sublimetext.com/3)
 * [atom multi cursor](https://atom.io/packages/multi-cursor)
+* [oy-my-zsh terminal themes](https://github.com/robbyrussell/oh-my-zsh)
 
 ***
 
@@ -273,7 +274,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [Adding Sublime Shortcut to Command Line](https://medium.com/@talialongname/shortcut-to-opening-a-file-in-sublime-from-the-command-line-68c015a29627)
 * `source ~/.zshrc` reloads zshrc file once modifications have been saved.
 * `open ~/.zshrc` opens zshrc file to make modifications.
-* [Importing and working with files in python] (https://www.youtube.com/watch?v=CqvZ3vGoGs0)
+* [Importing and working with files in python](https://www.youtube.com/watch?v=CqvZ3vGoGs0)
+* If you want to see the location of a certain module, you can run `which chromedriver` from command line.  When doing so, terminal will respond with the location of the module.  In this case, the response was `/usr/local/bin/chromedriver`.
 
 ***
 
