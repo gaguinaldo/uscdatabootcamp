@@ -153,6 +153,19 @@ To be sure that master has not changed while you have been working on the code.
 	git pull 
 
 ***
+# Libraries 
+* Pandas
+* SQLalchemy
+* PyMongo
+* Selenium
+* Beautiful Soup
+* Requests
+* Seaborn
+* Matplotlib
+* Splinter
+* Chromedriver
+* Flask
+
 # Frameworks
 * [SQL Alchemy](https://www.sqlalchemy.org/)
 * [Flask](http://flask.pocoo.org/) 
@@ -176,6 +189,7 @@ To be sure that master has not changed while you have been working on the code.
 * [oy-my-zsh terminal themes](https://github.com/robbyrussell/oh-my-zsh)
 * [Homebrew pacakge installer](https://brew.sh/)
 * [Anaconda](https://anaconda.org/)
+* [Dracula theme for iTerm2](https://draculatheme.com/iterm/)
 
 ***
 
