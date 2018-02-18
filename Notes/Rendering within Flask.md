@@ -1,4 +1,4 @@
-#Rendering a string, list and dictionary in Flask
+# Rendering a string, list and dictionary in Flask
 
 Depending on what you're doing, you may need to render a string, list or dict in the HTML page within a flask app.
 
