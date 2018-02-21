@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 
 # Scrape Mars news headline and teaser copy.
-
-
 def marsNasaNewsScrape():
     marsNasaUrl = 'https://mars.nasa.gov/news/'
     marsNasaUrlData = r.get(marsNasaUrl)
@@ -16,8 +14,6 @@ def marsNasaNewsScrape():
     return news_title, news_p
 
 # Scrape Mars weather from Twitter account.
-
-
 def marsWeatherScrape():
     marsWeather = 'https://twitter.com/MarsWxReport/status/966145463425650694'
     marsWeatherData = r.get(marsWeather)
