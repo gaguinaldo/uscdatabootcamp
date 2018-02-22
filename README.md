@@ -297,6 +297,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Git basics](https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx)
 * [Using oh-my-zsh](https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb)
 * [Callback functions](https://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o/9652434#9652434)
+* [Killing open ports -- Socket Errors](https://stackoverflow.com/questions/19071512/socket-error-errno-48-address-already-in-use)
 
 ***
 
@@ -340,3 +341,5 @@ Other than Learn Python the Hard Way (which is arguably a book) probably the mos
 + Python in a Nutshell by Alex Martelli
 
 + Learning Python or Programming Python by Mark Lutz
+
+***
