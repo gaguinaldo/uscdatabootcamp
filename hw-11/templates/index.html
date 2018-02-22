@@ -29,39 +29,92 @@
         </div>
     </div>
 
+    <hr>
 
+<div class='container'>
+    <center>
+        <h1>Featured Mars Image</h1>
+    </center>
+    <img src="{{featuredImage}}" class="img-fluid">
+</div>
 
+    <center>
+        <h1>Mars Hemisperes</h1>
+    </center>
 
-    <!-- News headline -->
-    <h1>{{headline}}</h1>
+    <hr>
 
-    <!-- Teaser copy -->
-    <p>
-        {{teaser}}
-    </p>
+        <center><div class='container'>
+            <div class="row">
 
-    <!-- Featured Image -->
-    <img src="{{featuredImage}}">
+              <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="{{hemiImage1Url}}" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">{{hemiImage1}}</h4>
+                  </div>
+                </div>
 
-    <!-- HTML Table -->
-    <!-- {{htmlTable}} -->
+              </div>
 
-    <!-- Mars Hemisphere Image 1 -->
-    <h2>{{hemiImage1}} </h2>
-    <img src="{{hemiImage1Url}}">
+              <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="{{hemiImage2Url}}" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">{{hemiImage2}}</h4>
+                  </div>
+                </div>
+              </div>
 
-    <!-- Mars Hemisphere Image 2 -->
-    <h2>{{hemiImage2}} </h2>
-    <img src="{{hemiImage2Url}}">
+            </div>
 
-    <!-- Mars Hemisphere Image 3 -->
-    <h2>{{hemiImage3}} </h2>
-    <img src="{{hemiImage3Url}}">
+            <div class="row">
 
-    <!-- Mars Hemisphere Image 4 -->
-    <h2>{{hemiImage3}} </h2>
-    <img src="{{hemiImage3Url}}">
+               <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="{{hemiImage3Url}}" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">{{hemiImage3}}</h4>
+                  </div>
+                </div>
+               </div>
 
+               <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="{{hemiImage4Url}}" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">{{hemiImage4}}</h4>
+                  </div>
+                </div>
+               </div>
+             </div>
+
+        </div>
+
+      </div>
+  </center>
+
+  <hr>
+
+    <div class='container'>
+        <center><h1>Mars Weather and Data</h1></center>
+        <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <center>{{weather}}</center>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <center>{{htmlTable}}</center>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

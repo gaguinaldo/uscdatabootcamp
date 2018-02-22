@@ -28,7 +28,8 @@ def mongo_store():
         'teaser': news_p,
         'image': featured_image_url,
         'hemisphere': hemisphere_image_urls,
-        'dataHtml': df_table_html
+        'dataHtml': df_table_html,
+        'weather': mars_weather
     }
 
     # Insert documnet into the collection

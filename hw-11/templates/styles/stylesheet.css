@@ -5,7 +5,13 @@
     padding-bottom: 10px;
 }
 
-.h1{
-
-    font-style: bold;
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #A8A8A8;
+    color: white;
+    text-align: center;
+    font-size: 12px;
 }
