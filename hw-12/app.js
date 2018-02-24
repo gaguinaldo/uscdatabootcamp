@@ -51,13 +51,10 @@ function searchButtonClick() {
         var returnCity = data.city.toLowerCase();
         var returnCountry = data.country.toLowerCase();
         var returnShape = data.shape.toLowerCase();
-        // var returnDate = data.date/time.toLowerCase();
-        /* Need to figure out how to escape the '/' in 'date/time'.
+        var returnDate = data.datetime.toLowerCase();
 
-        Using \/ does not seem to work.
-        */
 
-        return (returnState === filterState || returnCity === filterCity || returnCountry === filterCountry || returnShape === filterShape)
+        return (returnState === filterState || returnCity === filterCity || returnCountry === filterCountry || returnShape === filterShape || returnDate === filterDate)
     };
   renderDataTable();
 }
@@ -69,7 +66,3 @@ function eraseText() {
     $shapeInput.value = "";
     $dateInput.value = "";
 }
-
-// '|| returnDate === filterDate' to the return statement
-
-
