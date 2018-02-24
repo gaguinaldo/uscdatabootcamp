@@ -1,5 +1,6 @@
-from flask import Flask, render_template, Markup
+from flask import Flask, render_template, Markup, redirect
 import mongo_storage
+import datetime
 
 
 app = Flask(__name__)
@@ -10,7 +11,7 @@ def index():
 
     marsScrapeDataOutput = mongo_storage.mongo_store()
 
-    #https://stackoverflow.com/questions/3206344/passing-html-to-template-using-flask-jinja2/3206446
+    # https://stackoverflow.com/questions/3206344/passing-html-to-template-using-flask-jinja2/3206446
 
     htmlTable = Markup(marsScrapeDataOutput[0]['dataHtml'])
     headline = marsScrapeDataOutput[0]['headline']
@@ -30,7 +31,17 @@ def index():
     hemiImage4Url = marsScrapeDataOutput[0]['hemisphere'][3]['img_url']
     hemiImage4 = marsScrapeDataOutput[0]['hemisphere'][3]['title']
 
-    return render_template('index.html', htmlTable=htmlTable, headline=headline, teaser=teaser, featuredImage=featuredImage, hemiImage1=hemiImage1, hemiImage1Url=hemiImage1Url, hemiImage2Url=hemiImage2Url, hemiImage2=hemiImage2, hemiImage3Url=hemiImage3Url, hemiImage3=hemiImage3, hemiImage4Url=hemiImage4Url, hemiImage4=hemiImage4, weather=weather)
+    currentDate = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+
+    return render_template('index.html', htmlTable=htmlTable, headline=headline, teaser=teaser, featuredImage=featuredImage, hemiImage1=hemiImage1, hemiImage1Url=hemiImage1Url, hemiImage2Url=hemiImage2Url, hemiImage2=hemiImage2, hemiImage3Url=hemiImage3Url, hemiImage3=hemiImage3, hemiImage4Url=hemiImage4Url, hemiImage4=hemiImage4, weather=weather, currentDate=currentDate)
+
+
+@app.route('/scrape')
+def scrape():
+
+    marsScrapeDataOutput = marsScrapeDataOutput = mongo_storage.mongo_store()
+
+    return redirect("http://localhost:5000/", code=302)
 
 
 if __name__ == '__main__':
