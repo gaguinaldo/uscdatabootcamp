@@ -1,57 +1,75 @@
-// Link HTMl to external app.js file. (Complete)
 
-// Import data.js to app.js file.
+// Select HTML elements and assign to variables
+var $tbody = document.querySelector("tbody");
+var $dateInput = document.querySelector("#date");
+var $stateInput = document.querySelector("#state");
+var $cityInput = document.querySelector("#city");
+var $countryInput = document.querySelector("#country");
+var $shapeInput = document.querySelector("#shape");
+var $searchBtn = document.querySelector("#search");
+var $resetBtn = document.querySelector("#erase")
 
-// Create a script that dynamically creates a table for each UFO sighting.
-// The table should have a column for date/time, city, state, country, shape, and the comments.
+$searchBtn.addEventListener("click", searchButtonClick);
+$resetBtn.addEventListener("click", eraseText);
 
-// Create an input field in the HTML that, when populated, will dynamically display the with the data on the screen.
+// Initially set filteredUfoData to dataSet to render all of the data within the file on the table.
+var filteredUfoData = dataSet;
 
-// Need to figure out how to dynamically generate a table.
-// Need to figure out how to style a table using Bootstrap and CSS.
+/* When opening the page, the renderDataTable function loads to load all of the data in the file named 'dataSet'
+*/
+function renderDataTable(){
+    $tbody.innerHTML = "";
 
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
+    for (var i = 0; i < filteredUfoData.length; i++) {
+        var dates = filteredUfoData[i];
+        var fields = Object.keys(dates);
+        var $row = $tbody.insertRow(i);
 
-// var tbody = document.querySelector("tbody");
-// var dateInput = document.querySelector("#date");
-// var searchBtn = document.querySelector("#search");
-
-// searchBtn.addEventListener("click", handleSearchButtonClick);
-
-// // Set filteredUfoData to data initially
-// var filteredUfoData = dataSet;
-
-// var dateSelect = '1/1/2010'
-var shapeSelect = 'triangle'
-// var citySelect = 'los angeles'
-// var countrySelect = 'usa'
-// var stateSelect = 'ca'
-
-for (var i = 0; i < dataSet.length; i++){
-    if (dataSet[i].shape === shapeSelect) {
-        var entry = dataSet[i].comments
-        console.log(entry)
+        for (var j = 0; j < fields.length; j++) {
+            var field = fields[j];
+            var $cell = $row.insertCell(j);
+            $cell.innerText = dates[field];
+        }
     }
 }
+renderDataTable();
 
 
-// Next step, print to HTML page instead of console using inner HTML or another method.
+function searchButtonClick() {
+
+  var filterState = $stateInput.value.trim().toLowerCase();
+  var filterCity = $cityInput.value.trim().toLowerCase();
+  var filterCountry = $countryInput.value.trim().toLowerCase();
+  var filterShape = $shapeInput.value.trim().toLowerCase();
+  var filterDate = $dateInput.value.trim().toLowerCase()
+
+  filteredUfoData = dataSet.filter(daHollaBackFunction);
+
+    function daHollaBackFunction(data) {
+
+        var returnState = data.state.toLowerCase();
+        var returnCity = data.city.toLowerCase();
+        var returnCountry = data.country.toLowerCase();
+        var returnShape = data.shape.toLowerCase();
+        // var returnDate = data.date/time.toLowerCase();
+        /* Need to figure out how to escape the '/' in 'date/time'.
+
+        Using \/ does not seem to work.
+        */
+
+        return (returnState === filterState || returnCity === filterCity || returnCountry === filterCountry || returnShape === filterShape)
+    };
+  renderDataTable();
+}
+
+function eraseText() {
+    $stateInput.value = "";
+    $cityInput.value = "";
+    $countryInput.value = "";
+    $shapeInput.value = "";
+    $dateInput.value = "";
+}
+
+// '|| returnDate === filterDate' to the return statement
 
 
-/*
-    datetime: "1/1/2010",
-    city: "el cajon",
-    state: "ca",
-    country: "us",
-    shape: "triangle",
-    durationMinutes: "12 minutes",
-    comments: "3 Red objects hovering over El Cajon CA"
-
-*/
