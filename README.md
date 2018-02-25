@@ -298,7 +298,9 @@ These are some of the resources that I found useful for the bootcamp.
 * [Using oh-my-zsh](https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb)
 * [Callback functions](https://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o/9652434#9652434)
 * [Killing open ports -- Socket Errors](https://stackoverflow.com/questions/19071512/socket-error-errno-48-address-already-in-use)
-* [ES 6](https://hackernoon.com/js-var-let-or-const-67e51dbb716f)
+* [Variables and Hoisting on ES 6](https://hackernoon.com/js-var-let-or-const-67e51dbb716f)
+* [.js 'this' part 1](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
+* [.js 'this' part 2](http://web.archive.org/web/20110725013125/http://www.digital-web.com/articles/scope_in_javascript/)
 
 ***
 
