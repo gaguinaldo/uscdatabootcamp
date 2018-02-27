@@ -25,5 +25,5 @@ var layout = {
 };
 
 // Plot the chart to a div tag with id "bar-plot"
-//Format is: Plotly.newPlot(<css class>, <data array>, <plot layout>);
+//Format is: Plotly.newPlot(<css class or id>, <data array>, <plot layout>);
 Plotly.newPlot('bar-plot', data, layout); 
