@@ -301,6 +301,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [Variables and Hoisting on ES 6](https://hackernoon.com/js-var-let-or-const-67e51dbb716f)
 * [.js 'this' part 1](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
 * [.js 'this' part 2](http://web.archive.org/web/20110725013125/http://www.digital-web.com/articles/scope_in_javascript/)
+* [Arrow functions](https://medium.freecodecamp.org/es6-functions-9f61c72b1e86)
 
 ***
 
