@@ -302,6 +302,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [.js 'this' part 1](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
 * [.js 'this' part 2](http://web.archive.org/web/20110725013125/http://www.digital-web.com/articles/scope_in_javascript/)
 * [Arrow functions](https://medium.freecodecamp.org/es6-functions-9f61c72b1e86)
+* [Python range](http://treyhunner.com/2018/02/python-range-is-not-an-iterator/)
+* [ES6 Functions](https://medium.freecodecamp.org/es6-functions-9f61c72b1e86)
 
 ***
 
