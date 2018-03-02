@@ -306,6 +306,7 @@ These are some of the resources that I found useful for the bootcamp.
 * [ES6 Functions](https://medium.freecodecamp.org/es6-functions-9f61c72b1e86)
 * [Understanding `if __name__ == "__main__":` in python](https://youtu.be/sugvnHA7ElY)
 * [Converting SQLite to PostgreSQL for Heroku](https://www.quora.com/What-is-the-best-way-to-copy-my-SQLite-database-to-PostgreSQL-so-I-can-deploy-it-to-Heroku)
+* [PostgreSQL, SQLAlchemy and Flask](http://www.patricksoftwareblog.com/database-using-postgresql-and-sqlalchemy/)
 
 ***
 
