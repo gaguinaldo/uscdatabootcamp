@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker, Query
+import json
 
 engine = create_engine('sqlite:///DataSets/belly_button_biodiversity.sqlite', convert_unicode=True, echo=False)
 Base = declarative_base()
@@ -61,4 +62,17 @@ def metaOutput(sample):
                  'SAMPLEID': each[5]
                  } for each in queryExpression]
 
+    return dataDict
+
+
+def sampleJson(sample):
+    query = 'SELECT otu_id, %s FROM Samples ORDER BY %s DESC LIMIT 10' % (sample, sample)
+    queryData = engine.execute(query)
+    queryList = [each for each in queryData]
+    otu_id, sampleValues = zip(*queryList)
+    dataDict = {"otu_ids": list(otu_id),
+                "sample_values": list(sampleValues)
+                }
+    # https://stackoverflow.com/questions/14661051/convert-python-dictionary-to-json-array
+    # jsonarray = json.dumps(dataDict)
     return dataDict

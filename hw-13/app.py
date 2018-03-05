@@ -1,7 +1,8 @@
 from flask import Flask, render_template, jsonify
-from database import otuOutput, nameOutput, washFreq, metaOutput
+from database import otuOutput, nameOutput, washFreq, metaOutput, sampleJson
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
@@ -36,6 +37,14 @@ def wfreq(sample):
 def meta(sample):
 
     dataDict = metaOutput(sample)
+
+    return jsonify(dataDict)
+
+
+@app.route('/api/v1/samples/<sample>')
+def sampleSample(sample):
+
+    dataDict = sampleJson(sample)
 
     return jsonify(dataDict)
 
