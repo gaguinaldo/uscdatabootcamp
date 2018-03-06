@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <!-- Jumobtron -->
     <div class='container'>
         <div class="jumbotron">
             <h1 class="display-3">Welcome to the Belly Button Diversity API</h1>
@@ -26,18 +27,25 @@
         </div>
     </div>
 
+    <!-- Dropdown list -->
     <select id="selDataset" onchange="getData(this.value)">
         <option value=#>Select Sample</option>
     </select>
 
+    <!-- List of all of the meta data-->
     <div class='container'>
         <h1>Sample MetaData</h1>
             <ul id='metaList'></ul>
 
     </div>
 
+    <!-- Place Holder for the Pie Chart -->
     <div id="pie"></div>
 
+    <!-- Place Holder for the Bubble Chart -->
+    <div id="bubble"></div>
+
+    <!-- Lis tof all of the API routes -->
     <div class='container'>
         <h1>Available Routes</h1>
             <ul>
@@ -45,10 +53,11 @@
                 <li>api/v1/names</li>
                 <li>api/v1/wfreq/&ltsample&gt</li>
                 <li>api/v1/metadata/&ltsample&gt</li>
+                <li>api/v1/samples/&ltsample&gt</li>
             </ul>
     </div>
 
-    <!-- This is the footer-->
+        <!-- This is the footer -->
       <div class='footer'>
           <p>
               Copyright: Grant T. Aguinaldo 2018
