@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Homework 13 :: Grant Aguinaldo</title>
 
-    <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css')}}>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -24,20 +24,29 @@
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </p>
         </div>
-
-        <h1>Available Routes</h1>
-        <ul>
-            <li>api/v1/otu</li>
-            <li>api/v1/names</li>
-            <li>api/v1/wfreq/&ltsample&gt</li>
-            <li>api/v1/metadata/&ltsample&gt</li>
-        </ul>
-
-        <!-- Need to dynamically populate dropdown from the API endpoint:  https://stackoverflow.com/questions/9895082/javascript-populate-drop-down-list-with-array -->
-        <select id="locality-dropdown" name="locality">
-        </select>
     </div>
 
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value=#>Select Sample</option>
+    </select>
+
+    <div class='container'>
+        <h1>Sample MetaData</h1>
+            <ul id='metaList'></ul>
+
+    </div>
+
+    <div id="pie"></div>
+
+    <div class='container'>
+        <h1>Available Routes</h1>
+            <ul>
+                <li>api/v1/otu</li>
+                <li>api/v1/names</li>
+                <li>api/v1/wfreq/&ltsample&gt</li>
+                <li>api/v1/metadata/&ltsample&gt</li>
+            </ul>
+    </div>
 
     <!-- This is the footer-->
       <div class='footer'>
@@ -46,7 +55,7 @@
           </p>
       </div>
 
-    <script type="text/javascript" src='index.js'></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
