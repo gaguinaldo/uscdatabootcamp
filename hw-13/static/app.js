@@ -27,6 +27,9 @@ function getData() {
 
         sampleValue = document.getElementById("selDataset").value;
 
+        //https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
+        document.getElementById("metaList").innerHTML = ""
+
         var endPoint = '/api/v1/metadata/' + sampleValue.split('_')[1]
 
         Plotly.d3.json(endPoint, function(error, response) {
@@ -34,7 +37,7 @@ function getData() {
 
             d3.select('#metaList').append('li').text('BB Type: ' + response[0]['BBTYPE'])
             d3.select('#metaList').append('li').text('Ethnicity: '+ response[0]['ETHNICITY'])
-            d3.select('#metaList').append('li').text('Gender: ' + response[0]['GENDER'])
+            d3.select('#metaList').appendus('li').text('Gender: ' + response[0]['GENDER'])
             d3.select('#metaList').append('li').text('Location: ' + response[0]['LOCATION'])
             d3.select('#metaList').append('li').text('Sample ID: ' + response[0]['SAMPLEID'])
             d3.select('#metaList').append('li').text('Age: ' + response[0]['age'])
@@ -99,4 +102,41 @@ function getData() {
 Current problems include the fact that when a new value is selected, the new metadata is appended to the original data.
 Cannot figure out how to generate bubble chart.
 https://plot.ly/javascript/bubble-charts/#marker-size-on-bubble-charts
+*/
+
+/*
+function init(){
+    //Make call to populate data upon loading
+}
+
+init()  //Loads an initial data set into the page.
+
+
+function updatePlotly(newdata) {
+  var PIE = document.getElementById("pie");
+  Plotly.restyle(PIE, "values", [newdata]);
+}
+
+
+function getData(dataset) {
+    var data = [];
+    var values = [];
+
+    Plotly.d3.json(endPointSampleData, function(error, response) {
+
+        //Take output from response and insert into the switch statement.
+        //Name case statement the value of the dropdown
+        //Assign the response to the data and values field.
+    }
+
+    switch (dataset) {
+        case [TAKE RESPONSE AND INSERT AS STRING]:
+          data = [TAKE RESPONSE AND INSERT AS LIST];
+          values = [TAKE RESPONSE AND INSERT AS LIST]
+          break;
+      }
+      updatePlotly(data);
+    }
+
+
 */
