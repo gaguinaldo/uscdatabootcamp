@@ -56,7 +56,7 @@ function getData() {
                 }];
 
                 var layoutPie = {
-                    height: 600,
+                    height: 500,
                     width: 800
                 };
 
@@ -75,19 +75,18 @@ function getData() {
                     mode: 'markers',
                     marker: {
                         size: [sizeList],
-                        sizemode: 'area'
                     }
                 };
 
                 var data = [trace];
 
                 var layout = {
-                      title: 'Marker Size',
+                      title: 'Bubble Chart of the Bacteria Distrubution (all data)',
                       showlegend: false,
-                      height: 1000,
-                      width: 1000
+                      height: 600,
+                      width: 600
                     };
-            Plotly.newPlot('bubble', data, layout);
+            Plotly.plot('bubble', data, layout);
             }
 
         graphPieData()
@@ -96,4 +95,9 @@ function getData() {
         })
 };
 
-//Need to include init function to load a data set when the page opens.  Once this is set, the getData function willl be an update.
+/*
+Current problems include the fact that when a new value is selected, the new metadata is appended to the original data.
+Cannot figure out how to generate bubble chart.
+https://plot.ly/javascript/bubble-charts/#marker-size-on-bubble-charts
+How to select one of two <ul> from the DOM.
+*/

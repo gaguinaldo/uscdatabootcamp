@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Homework 13 :: Grant Aguinaldo</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css')}}>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -18,36 +18,74 @@
     <!-- Jumobtron -->
     <div class='container'>
         <div class="jumbotron">
-            <h1 class="display-3">Welcome to the Belly Button Diversity API</h1>
-                <p class="lead">These are the available routes that you can query.</p>
+            <h1 class="display-3">Welcome to the Belly Button Diversity Dashboard</h1>
+                <p class="lead">To start, select a sample number from the dropdown menu below.</p>
 
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
         </div>
     </div>
 
-    <!-- Dropdown list -->
-    <select id="selDataset" onchange="getData(this.value)">
-        <option value=#>Select Sample</option>
-    </select>
 
-    <!-- List of all of the meta data-->
     <div class='container'>
-        <h1>Sample MetaData</h1>
-            <ul id='metaList'></ul>
+        <div class="row">
+            <div class="col-sm-6" style="width: 480px; height: 200px;">
+                <center>
+                    <h2>Sample Selection</h2>
+                        <select id="selDataset" onchange="getData(this.value)">
+                            <option value=#>Select Sample</option>
+                    </select>
+                </center>
+            </div>
 
+            <div class="col-sm-6">
+                <center>
+                    <h2>Sample MetaData</h2>
+                        <ul id='metaList'></ul>
+                </center>
+            </div>
+        </div>
     </div>
 
-    <!-- Place Holder for the Pie Chart -->
-    <div id="pie"></div>
 
-    <!-- Place Holder for the Bubble Chart -->
-    <div id="bubble"></div>
+    <hr>
 
-    <!-- Lis tof all of the API routes -->
+
     <div class='container'>
-        <h1>Available Routes</h1>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <center><h2>Pie Chart of the Top 10 Bacterial Species Found</h2></center>
+                    <div id="pie"style="width: 480px; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <center><h2>Bubble Chart of the Bacteria Distrubution (all data)</h2></center>
+                    <div id="bubble"style="width: 480px; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+<!--       <div class='container'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <center><h2>Gauge Chart of the Number of Washes</h2></center>
+                    <div id="gauge">
+            </div>
+        </div>
+    </div> -->
+
+    <hr>
+
+    <!-- List of all of the API routes -->
+    <div class='container'>
+        <h2>Available Routes</h2>
             <ul>
                 <li>api/v1/otu</li>
                 <li>api/v1/names</li>
@@ -57,12 +95,6 @@
             </ul>
     </div>
 
-        <!-- This is the footer -->
-      <div class='footer'>
-          <p>
-              Copyright: Grant T. Aguinaldo 2018
-          </p>
-      </div>
 
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
