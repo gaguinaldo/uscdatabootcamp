@@ -32,12 +32,12 @@ function getData() {
         Plotly.d3.json(endPoint, function(error, response) {
             if (error) return console.warn(error);
 
-            d3.select('ul').append('li').text('BB Type: ' + response[0]['BBTYPE'])
-            d3.select('ul').append('li').text('Ethnicity: '+ response[0]['ETHNICITY'])
-            d3.select('ul').append('li').text('Gender: ' + response[0]['GENDER'])
-            d3.select('ul').append('li').text('Location: ' + response[0]['LOCATION'])
-            d3.select('ul').append('li').text('Sample ID: ' + response[0]['SAMPLEID'])
-            d3.select('ul').append('li').text('Age: ' + response[0]['age'])
+            d3.select('#metaList').append('li').text('BB Type: ' + response[0]['BBTYPE'])
+            d3.select('#metaList').append('li').text('Ethnicity: '+ response[0]['ETHNICITY'])
+            d3.select('#metaList').append('li').text('Gender: ' + response[0]['GENDER'])
+            d3.select('#metaList').append('li').text('Location: ' + response[0]['LOCATION'])
+            d3.select('#metaList').append('li').text('Sample ID: ' + response[0]['SAMPLEID'])
+            d3.select('#metaList').append('li').text('Age: ' + response[0]['age'])
 
             })  //Closes Plotly.d3.json(endPoint)
 

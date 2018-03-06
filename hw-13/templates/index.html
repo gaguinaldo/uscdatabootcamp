@@ -27,7 +27,20 @@
 
     <div class='container'>
         <div class="row">
-            <div class="col-sm-6" style="width: 480px; height: 200px;">
+            <div class="col-sm-4" style="width: 480px; height: 200px;">
+                <center>
+                    <h2>Routes</h2>
+                        <ul>
+                            <li>api/v1/otu</li>
+                            <li>api/v1/names</li>
+                            <li>api/v1/wfreq/&ltsample&gt</li>
+                            <li>api/v1/metadata/&ltsample&gt</li>
+                            <li>api/v1/samples/&ltsample&gt</li>
+                        </ul>
+                </center>
+            </div>
+
+            <div class="col-sm-4" style="width: 480px; height: 200px;">
                 <center>
                     <h2>Sample Selection</h2>
                         <select id="selDataset" onchange="getData(this.value)">
@@ -36,7 +49,7 @@
                 </center>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <center>
                     <h2>Sample MetaData</h2>
                         <ul id='metaList'></ul>
@@ -80,21 +93,6 @@
             </div>
         </div>
     </div> -->
-
-    <hr>
-
-    <!-- List of all of the API routes -->
-    <div class='container'>
-        <h2>Available Routes</h2>
-            <ul>
-                <li>api/v1/otu</li>
-                <li>api/v1/names</li>
-                <li>api/v1/wfreq/&ltsample&gt</li>
-                <li>api/v1/metadata/&ltsample&gt</li>
-                <li>api/v1/samples/&ltsample&gt</li>
-            </ul>
-    </div>
-
 
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
