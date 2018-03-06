@@ -99,5 +99,4 @@ function getData() {
 Current problems include the fact that when a new value is selected, the new metadata is appended to the original data.
 Cannot figure out how to generate bubble chart.
 https://plot.ly/javascript/bubble-charts/#marker-size-on-bubble-charts
-How to select one of two <ul> from the DOM.
 */
