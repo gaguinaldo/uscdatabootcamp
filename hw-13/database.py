@@ -76,3 +76,16 @@ def sampleJson(sample):
     # https://stackoverflow.com/questions/14661051/convert-python-dictionary-to-json-array
     # jsonarray = json.dumps(dataDict)
     return dataDict
+
+
+def sampleJsonAll(sample):
+    query = 'SELECT otu_id, %s FROM Samples ORDER BY %s DESC LIMIT 100' % (sample, sample)
+    queryData = engine.execute(query)
+    queryList = [each for each in queryData]
+    otu_id, sampleValues = zip(*queryList)
+    dataDict = {"otu_ids": list(otu_id),
+                "sample_values": list(sampleValues)
+                }
+    # https://stackoverflow.com/questions/14661051/convert-python-dictionary-to-json-array
+    # jsonarray = json.dumps(dataDict)
+    return dataDict

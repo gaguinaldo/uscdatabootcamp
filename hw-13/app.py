@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import otuOutput, nameOutput, washFreq, metaOutput, sampleJson
+from database import otuOutput, nameOutput, washFreq, metaOutput, sampleJson, sampleJsonAll
 
 app = Flask(__name__)
 
@@ -45,6 +45,14 @@ def meta(sample):
 def sampleSample(sample):
 
     dataDict = sampleJson(sample)
+
+    return jsonify(dataDict)
+
+
+@app.route('/api/v1/samplesall/<sample>')
+def sampleSampleAll(sample):
+
+    dataDict = sampleJsonAll(sample)
 
     return jsonify(dataDict)
 
