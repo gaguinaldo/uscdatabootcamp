@@ -61,7 +61,7 @@ Plotly.plot('pie', dataPie, layoutPie);
 function graphBubbleData(response){
     sizeList = []
     for (var i = 0; i < response['sample_values'].length; i++){
-        sizeList.push(100 * response['sample_values'][i])
+        sizeList.push(0.3 * response['sample_values'][i])
     };
 
     var trace = {
@@ -69,7 +69,7 @@ function graphBubbleData(response){
         y: response['sample_values'],
         mode: 'markers',
         marker: {
-            size: [sizeList],
+            size: sizeList
         }
     };
 
@@ -78,8 +78,8 @@ function graphBubbleData(response){
     var layout = {
           title: 'Bubble Chart of the Bacteria Distrubution (all data)',
           showlegend: false,
-          height: 600,
-          width: 600
+          height: 400,
+          width: 800
         };
 Plotly.plot('bubble', data, layout);
 };
@@ -90,31 +90,40 @@ function clearPage(){
     //https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
     document.getElementById("metaList").innerHTML = ""
     document.getElementById("pie").innerHTML = ""
+    document.getElementById("bubble").innerHTML = ""
 };
 
+function updatePlotly(newdata) {
+  var PIE = document.getElementById("pie");
+  Plotly.restyle(PIE, "values", [newdata]);
+}
 
-//This is a test.
 
 function getData() {
-
-        clearPage()
 
         sampleValue = document.getElementById("selDataset").value;
 
         var endPoint = '/api/v1/metadata/' + sampleValue.split('_')[1]
-
         apiCallMetaData(endPoint)
 
         var endPointSampleData = '/api/v1/samples/' + sampleValue
-
         Plotly.d3.json(endPointSampleData, function(error, response) {
 
             if (error) return console.warn(error);
 
             graphPieData(response)
+
+        })
+
+        var endPointSampleDataAll = '/api/v1/samplesall/' + sampleValue
+        Plotly.d3.json(endPointSampleDataAll, function(error, response) {
+
+            if (error) return console.warn(error);
+
             graphBubbleData(response)
 
         })
 
+    clearPage()
 
 };
