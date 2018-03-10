@@ -112,6 +112,8 @@ You can check out the live app by clicking [here](https://grant-aguinaldo-hw13.h
 
 Here is a picture of the finished product.
 
+The repo that has the actual code that is being hosted in Heroku is [here](https://github.com/grantaguinaldo/hw-13).  The repo that you are reading is a copy of what is actually being hosted so that I could include this write up of the project.
+
 ![](./Images/screenshot.png)
 
 ***
