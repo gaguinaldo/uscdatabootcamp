@@ -1,20 +1,19 @@
-# Belly Button Biodiversity
+# Homework 13:  Full Stack Web App to Visualize Data
 
-![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
+![](./Images/james-wainscoat-521748-unsplash.jpg)
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
 
-## Step 1 - Flask API
+In this project, I built an app to explore the data collected from the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
 
-Use Flask to design an API for your dataset and to serve the HTML and JavaScript required for your dashboard page. Note: We recommend using the sqlite database file and SQLAlchemy inside of your Flask application code, but you are permitted to read the CSV data directly into Pandas DataFrames for this assignment. You will still need to output the data as JSON in the format specified in the routes below.
+***
 
-* First, create a template called `index.html` for your dashboard landing page. Use the Bootstrap grid system to create the structure of the dashboard page.
+## Step 1: Create Four Flask APIs
 
-* Next, create the following routes for your api.
+I first started by created four API routes using Flask.
 
 ```python
 @app.route("/")
-    """Return the dashboard homepage."""
+    """Return the dashboard homepage using render_templates."""
 ```
 ```python
 @app.route('/names')
@@ -25,10 +24,6 @@ Use Flask to design an API for your dataset and to serve the HTML and JavaScript
         "BB_940",
         "BB_941",
         "BB_943",
-        "BB_944",
-        "BB_945",
-        "BB_946",
-        "BB_947",
         ...
     ]
 
@@ -43,7 +38,6 @@ Use Flask to design an API for your dataset and to serve the HTML and JavaScript
     [
         "Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Halococcus",
         "Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Halococcus",
-        "Bacteria",
         "Bacteria",
         "Bacteria",
         ...
@@ -81,11 +75,7 @@ Use Flask to design an API for your dataset and to serve the HTML and JavaScript
 @app.route('/samples/<sample>')
     """OTU IDs and Sample Values for a given sample.
 
-    Sort your Pandas DataFrame (OTU ID and Sample Value)
-    in Descending Order by Sample Value
-
-    Return a list of dictionaries containing sorted lists  for `otu_ids`
-    and `sample_values`
+    Return a list of dictionaries containing sorted lists  for the `otu_ids` values as well as the `sample_values`
 
     [
         {
@@ -106,92 +96,30 @@ Use Flask to design an API for your dataset and to serve the HTML and JavaScript
     """
 ```
 
----
+***
 
-## Step 2 - Plotly.js
+## Step 2: Create Plotly Charts
 
-Use Plotly.js to build interactive charts for your dashboard.
+In this step, I created three charts that visualizes the data for a given sample, when the sample is selected from the dropdown menu. 
 
-* Use the route `/names` to populate a dropdown select element with the list of sample names.
+I created a pie chart, a bubble chart and a gauge chart using the Plotly.js library.
 
-  * Use `document.getElementById`, `document.createElement` and `append` to populate the create option elements and append them to the dropdown selector.
+## Step 3: Deploy App to Heroku
 
-  * Use the following HTML tag for the dropdown selector
+In the thrid and final step of this project, I deployed the app to the Heroku platform.  
 
-  ```html
-  <select id="selDataset" onchange="optionChanged(this.value)"></select>
-  ```
-  * Create a function called `optionChanged` to handle the change event when a new sample is selected (i.e. fetch data for the newly selected sample).
+You can check out the live app by clicking [here](https://grant-aguinaldo-hw13.herokuapp.com/)
 
-  ![dropdown](Images/dropdown.png)
+Here is a picture of the finished product.
 
-* Create a PIE chart that uses data from your routes `/samples/<sample>` and `/otu` to display the top 10 samples.
+![](./Images/screenshot.png)
 
-  * Use the Sample Value as the values for the PIE chart
+***
 
-  * Use the OTU ID as the labels for the pie chart
 
-  * Use the OTU Description as the hovertext for the chart
 
-  * Use `Plotly.restyle` to update the chart whenever a new sample is selected
 
-  ![PIE Chart](Images/pie_chart.png)
 
-* Create a Bubble Chart that uses data from your routes `/samples/<sample>` and `/otu` to plot the __Sample Value__ vs the __OTU ID__ for the selected sample.
 
-  * Use the OTU IDs for the x values
 
-  * Use the Sample Values for the y values
 
-  * Use the Sample Values for the marker size
-
-  * Use the OTU IDs for the marker colors
-
-  * Use the OTU Description Data for the text values
-
-  * Use `Plotly.restyle` to update the chart whenever a new sample is selected
-
-  ![Bubble Chart](Images/bubble_chart.png)
-
-* Display the sample metadata from the route `/metadata/<sample>`
-
-  * Display each key/value pair from the metadata JSON object somewhere on the page
-
-  * Update the metadata for each sample that is selected
-
-* You are welcome to create any layout that you would like for your dashboard. An example dashboard page might look something like the following.
-
-![Example Dashboard Page](Images/dashboard_part1.png)
-![Example Dashboard Page](Images/dashboard_part2.png)
-
-* Finally, deploy your Flask app to Heroku.
-
----
-
-## Optional Challenge Assignment
-
-The following task is completely optional
-
-* Adapt the Gauge Chart from [https://plot.ly/javascript/gauge-charts/](https://plot.ly/javascript/gauge-charts/) to plot the Weekly Washing Frequency obtained from the route `/wfreq/<sample>`
-
-* You will need to modify the example gauge code to account for values ranging from 0 - 9.
-
-* Use `Plotly.restyle` to update the chart whenever a new sample is selected
-
-![Weekly Washing Frequency Gauge](Images/gauge.png)
-
----
-
-## Hints
-
-* Use `Plotly.d3.json` to fetch data for all of your api routes
-
-* Refer to the [Plotly.js Documentation](https://plot.ly/javascript/) when building the plots
-
-* Use Bootstrap to structure your HTML template.
-
-* Use Pandas inside of your Flask routes to help format, filter, or sort the data before converting to JSON
-
-## Copyright
-
-Trilogy Education Services © 2017. All Rights Reserved.
