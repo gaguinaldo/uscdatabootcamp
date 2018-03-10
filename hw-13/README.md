@@ -108,7 +108,9 @@ I created a pie chart, a bubble chart and a gauge chart using the Plotly.js libr
 
 In the thrid and final step of this project, I deployed the app to the Heroku platform.  
 
-You can check out the live app by clicking [here](https://grant-aguinaldo-hw13.herokuapp.com/)
+You can check out the live app by clicking [here](http://www.bb.grantaguinaldo.com/) or entering the following address into your browser:
+
+`http://www.bb.grantaguinaldo.com/`
 
 Here is a picture of the finished product.
 
