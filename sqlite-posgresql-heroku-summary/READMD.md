@@ -6,10 +6,7 @@ In additon, the use of a database in the rehlm of data analysis cause it allows 
 
 Depending on the usecase, a sitution exists where you develop using one technology that is not supported by the platform that the app will ultamately reside on.
 
-And a specific example of this is using SQLite within an app that will be hosted on Heroku.
-
-Heroku is a platform that can host and deploy webapps.
-
+And a specific example of this is using SQLite within an app that will be hosted on Heroku. Heroku is a platform that can host and deploy webapps.
 
 When doing development, many people opt to using SQLite since it is, light, in the sence that it does not need a server. 
 
@@ -56,13 +53,13 @@ You can install this using homebrew as noted on this [page](https://devcenter.he
 
 To start, you'll first need to install the SQLite command line shell.  When you download the file and open it, you'll have three files.
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 12.09.13.png)
+![](./Screen Shot 2018-03-08 at 12.09.13.png)
 
 The one that you need is the one called `sqlite3`.  
 
 When you open `sqlite3` you'll get a window like this.
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 12.11.06.png)
+![](./Screen Shot 2018-03-08 at 12.11.06.png)
 
 This is the command line that you'll use to do the dump.
 
@@ -80,7 +77,7 @@ In this case `otu` was one of the tables that was in my database.
 
 Upon pressing enter, data should be returned to the screen.
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 12.17.56.png)
+![](./Screen Shot 2018-03-08 at 12.17.56.png)
 
 Once you see data being returned, you know that your database is connected properlly and you can move on.
 
@@ -149,7 +146,7 @@ At this point, you can run `psql` from your Terminal and not get the error `zsh:
 
 This is what your Terminal should look like after calling `psql`
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 12.40.19.png)
+![](./Screen Shot 2018-03-08 at 12.40.19.png)
 
 ## Step 4:  Connect to your Heroku PostgreSQL instance
 
@@ -165,7 +162,7 @@ Once you do that, you'll be taken to a page with all of the credentials.
 
 **Note:** that you do not want to share any of these credentails to anyone or make it visialbe in any part of your code.  This databse has been deleted and is the reason that I am showing this in this article.
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 12.48.15.png)
+![](./Screen Shot 2018-03-08 at 12.48.15.png)
 
 From this, all that you'll need is the Heroku CLI.  In this case it's `heroku pg:psql postgresql-rigid-57832 --app gtapetpals
 `
@@ -189,7 +186,7 @@ To compelte the command, you need to add in the file path to the sql file thatyo
 
 And this is what it looks like in Terminal.
 
-![](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 15.01.53.png)
+![](./Screen Shot 2018-03-08 at 15.01.53.png)
 
 Again, the name of my export was `belly_buton_export.sql` and the name of my app on Heroku was `gtapetpals`.  `postgresql-rigid-57832` is the name of the database that Heroku give me when I installed the Add-On.
 
@@ -201,9 +198,9 @@ Finally, once you have sucesfully imported the file into the Heroku PostgreSQL i
 
 This is work in progress and I welcome any comments, changes or updates based on what works and what doesn't. 
 
-[Here is a YouTube video](https://youtu.be/QjsoiwVlFW0) summarizing some of the steps I outline in this article.
+[Here is a YouTube video](https://youtu.be/QjsoiwVlFW0) summarizing some of the steps I outline in this article. This is a work in progress, and I'll be updating this article as things progress.
 
-![https://youtu.be/QjsoiwVlFW0](/Users/gta/Desktop/test-sql/Screen Shot 2018-03-08 at 15.03.57.png)
+![https://youtu.be/QjsoiwVlFW0](./Screen Shot 2018-03-08 at 15.03.57.png)
 
 
 
