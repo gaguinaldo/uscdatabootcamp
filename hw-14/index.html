@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Grant Aguinaldo</title>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <meta charset="UTF-8">
+    <title>D3Times</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-0">
+                <center>
+                    <h1>Welcome to the D3 Times</h1>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  col-md-9 col-md-offset-0">
+                <div class="iframeContainer">
+                    <!-- Students: Add a responsive iframe here that includes the d3.html file -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  col-md-9 col-md-offset-0">
+                <div class="article">
+                    <p>As part of this study, I looked at the correlation between two different data sets to see what observations can be made about a single demographic.To complete this analysis, I downloaded two different datasets. The first was from the U.S. Census Bureau's American Community Survey using the American FactFinder tool.  The second dataset was obtained from the CDC's Behavioral Risk Factor Surveillance System.
 
+                    <br>
+                    <br>
 
+                    When drilling down into the Census fact finder, I decided to analyze the dataset related to the patterns of US drivers commuting to and from work.  Specifically, this dataset shows the percentage of people who commute to work either by driving alone or carpooling broken down by five different groups [1] 20-24 years old, [2] 25-44 years old, [3] 45-54 years old, [4] 55-59 years old, and [5] 60 + years old by state. For the second data set, I decided to look at the percentage of people from each state who answered the question "About how long has it been since you last visited the doctor for a routine checkup?"
 
-<script type="text/javascript" src='./static/js/app.js'></script>
+                    <br>
+                    <br>
+
+                    For this dataset, respondents provided answers in one of five groups [1] Within the past year, [2] With the past two years, [3] Within the past five years, [4] Five or more years, [5] Never by each state.
+
+                    <br>
+                    <br>
+
+                    Data was then paired by state (i.e., commuting patterns and length of time since last being to the doctor) and a correlation test was run across all 10 groups.  A total of 50 correlation statistic were calculated for this study. From the table below, it's seen that there are both positive and negative correlations between both datasets.
+
+                    <br>
+                    <br>
+
+                    <center>
+                        <img src="./static/images/image1.png" width="450" height="250">
+                    </center>
+
+                    <br>
+                    <br>
+
+                    To complete the D3 portion of the assignment, I decided to plot the correlation between folks who are aged 20-24 who commute to work alone and those who have had a routine check-up five or more years ago.  The correlation for this pairing was 0.673.
+
+                    <br>
+                    <br>
+
+                    This suggests that people who drive to work alone and are aged 20-24 do not go to the doctor for routine checkups often.  in general, this makes sense, since this age group seems to be quite healthy. Interestingly, there is less of a correlation between folks who are aged 20-24 who carpool to work for the same time frame of visiting the doctor (0.673 vs 0.366).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer-->
+    <div id="footer">
+        <p>Grant Aguinaldo</p>
+    </div>
+<script type="text/javascript" src="static/javascript/app.js"></script>
+
 </body>
 </html>
