@@ -309,6 +309,8 @@ These are some of the resources that I found useful for the bootcamp.
 * [PostgreSQL, SQLAlchemy and Flask](http://www.patricksoftwareblog.com/database-using-postgresql-and-sqlalchemy/)
 * [Binding data](https://medium.com/@c_behrens/enter-update-exit-6cafc6014c36)
 * [d3 scales](http://d3indepth.com/scales/)
+* [Updated a forked repo on github](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
+* [Git cheatsheet](https://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/)
 
 ***
 
