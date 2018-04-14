@@ -1,0 +1,10 @@
+ 
+Financial Summary
+----------------------------------------
+Total Revenue:  18971412
+Minimum Revenue:  -1172384
+Maximum Revneue:  1195111
+Total Number of Transactions:  41
+Average:  462717.3658536585
+Month and year of the maximum revenue:  Sep-15
+Month and year of the minimim revenue:  Aug-14
