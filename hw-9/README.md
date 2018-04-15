@@ -1,162 +1,117 @@
-<!--lint disable no-heading-punctuation-->
-# Surfs Up!
-<!--lint enable no-heading-punctuation-->
+# SQL/Flask Data Integration Project (Including A Live API)
 
-<img src='images/surfs-up.jpeg' />
+For this project, I conducted an analysis of weather data that was provided in a CSV file.  
 
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you decided to do some climate analysis on the area. Because you are such an awesome person, you have decided to share your ninja analytical skills with the community by providing a climate analysis api. The following outlines what you need to do.
+The objective was to determine the historical weather patterns for a date range based on data that was collected at number of weather stations on the island of Oahu.
 
-## Step 1 - Data Engineering
+This project required the population of a SQL database from a CSV file, and the creation of a Flask RESTful API. The available routes included:
 
-The climate data for Hawaii is provided through two CSV files. Start by using Python and Pandas to inspect the content of these files and clean the data.
+        /api/v1.0/precipitation
+        /api/v1.0/stations
+        /api/v1.0/tobs
+        /api/v1.0/<start>/
+        /api/v1.0/<start>/<end>
 
-* Create a Jupyter Notebook file called `data_engineering.ipynb` and use this to complete all of your Data Engineering tasks.
+Once the API route were created, SQL queries were written to get the data needed to prepare the summary charts that are shown below.
 
-* Use Pandas to read in the measurement and station CSV files as DataFrames.
+![](./Submission/images/image1.png)
 
-* Inspect the data for NaNs and missing values. You must decide what to do with this data.
+![](./Submission/images/image2.png)
 
-* Save your cleaned CSV files with the prefix `clean_`.
+![](./Submission/images/image3.png)
 
----
 
-## Step 2 - Database Engineering
+### You can check out the live API by clicking here.
 
-Use SQLAlchemy to model your table schemas and create a sqlite database for your tables. You will need one table for measurements and one for stations.
+***
 
-* Create a Jupyter Notebook called `database_engineering.ipynb` and use this to complete all of your Database Engineering work.
+```Python
+from datetime import datetime, timedelta
+import numpy as np
+import sqlalchemy
+import pandas as pd
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+from flask import Flask, jsonify
 
-* Use Pandas to read your cleaned measurements and stations CSV data.
+app = Flask(__name__)
 
-* Use the `engine` and connection string to create a database called `hawaii.sqlite`.
+connection_string = 'sqlite:///hawaii.sqlite'
+engine = create_engine(connection_string)
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+Hawaii = Base.classes.hawaii_data
+session = Session(engine)
 
-* Use `declarative_base` and create ORM classes for each table.
 
-  * You will need a class for `Measurement` and for `Station`.
+@app.route("/")
+def index():
+    return (
+        "Available Routes:<br/>"
+        "/api/v1.0/precipitation<br/>"
+        "/api/v1.0/stations<br/>"
+        "/api/v1.0/tobs<br/>"
+        "/api/v1.0/&lt;start&gt;<br/>"
+        "/api/v1.0/&lt;start&gt;/&lt;end&gt;<br/>"
+    )
 
-  * Make sure to define your primary keys.
 
-* Once you have your ORM classes defined, create the tables in the database using `create_all`.
+@app.route('/api/v1.0/stations')
+def stations():
 
----
+    results = list(np.ravel(session.query(Hawaii.name).distinct().all()))
 
-## Step 3 - Climate Analysis and Exploration
+    return jsonify(results)
 
-You are now ready to use Python and SQLAlchemy to do basic climate analysis and data exploration on your new weather station tables. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Create a Jupyter Notebook file called `climate_analysis.ipynb` and use it to complete your climate analysis and data exporation.
+@app.route('/api/v1.0/precipitation')
+def precipitation():
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+    prcp_query = session.query(Hawaii.date_format, Hawaii.prcp).filter(Hawaii.date_format >= (dt.date.today() - dt.timedelta(days=365))).all()
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+    prcp_dict = {}
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+    for date, prcp in prcp_query:
+        prcp_dict.update({str(date): prcp})
 
-### Precipitation Analysis
+    return jsonify(prcp_dict)
 
-* Design a query to retrieve the last 12 months of precipitation data.
 
-* Select only the `date` and `prcp` values.
+@app.route('/api/v1.0/tobs')
+def tobs():
 
-* Load the query results into a Pandas DataFrame and set the index to the date column.
+    temp_query = session.query(Hawaii.date_format, Hawaii.tobs).filter(Hawaii.date_format >= '2016-08-23', Hawaii.date_format <= '2017-08-23').all()
+    temp_df = pd.DataFrame(temp_query).rename(columns={'tobs': 'temperature_observations'})
+    temp_df['temperature_observations'] = temp_df['temperature_observations'].astype(float)
+    temp_df['date_format'] = temp_df['date_format'].astype(str)
 
-* Plot the results using the DataFrame `plot` method.
+    new_df = temp_df.set_index('date_format')
 
-<center><img src='images/precip.png' /></center>
+    temp_dic = new_df.to_dict()
 
-* Use Pandas to print the summary statistics for the precipitation data.
+    return jsonify(temp_dic)
 
-### Station Analysis
 
-* Design a query to calculate the total number of stations.
+@app.route("/api/v1.0/<start>")
+@app.route("/api/v1.0/<start>/<end>")
+def min_max_temperature(start, end='2017-08-23'):
 
-* Design a query to find the most active stations.
+    def get_temp_date(start_date, end_date):
+        temp_query = session.query(Hawaii.tobs).filter(Hawaii.date_format >= start_date, Hawaii.date_format <= end_date).all()
 
-  * List the stations and observation counts in descending order
+        min_temp = np.min(temp_query)
+        avg_temp = np.average(temp_query)
+        max_temp = np.max(temp_query)
 
-  * Which station has the highest number of observations?
+        return min_temp, max_temp, avg_temp
 
-* Design a query to retrieve the last 12 months of temperature observation data (tobs).
+    min_temp, max_temp, avg_temp = get_temp_date(start, end)
 
-  * Filter by the station with the highest number of observations.
+    temp_dict = {"minimum_temperature": min_temp.astype(float), "average_temperature": avg_temp.astype(float), "maximum_temperature": max_temp.astype(float)}
+    return jsonify(temp_dict)
 
-  * Plot the results as a histogram with `bins=12`.
 
-  <center><img src='images/temp_hist.png' height="400px" /></center>
-
-### Temperature Analysis
-
-* Write a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d` and return the minimum, average, and maximum temperatures for that range of dates.
-
-* Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e. use "2017-01-01" if your trip start date was "2018-01-01")
-
-* Plot the min, avg, and max temperature from your previous query as a bar chart.
-
-  * Use the average temperature as the bar height.
-
-  * Use the peak-to-peak (tmax-tmin) value as the y error bar (yerr).
-
-<center><img src='images/temp_avg.png' height="400px"/></center>
-
-
-### Optional Recommended Analysis
-
-* The following are optional challenge queries. These are highly recommended to attempt, but not required for the homework.
-
-  * Calcualte the rainfall per weather station using the previous year's matching dates.
-
-* Calculate the daily normals. Normals are the averages for min, avg, and max temperatures.
-
-  * Create a function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Be sure to use all historic tobs that match that date string.
-
-  * Create a list of dates for your trip in the format `%m-%d`. Use the `daily_normals` function to calculate the normals for each date string and append the results to a list.
-
-  * Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.
-
-  * Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
-
-  <center><img src="images/daily_normals.png" /></center>
-
----
-
-## Step 4 - Climate App
-
-Now that you have completed your initial analysis, design a Flask api based on the queries that you have just developed.
-
-* Use FLASK to create your routes.
-
-### Routes
-
-* `/api/v1.0/precipitation`
-
-  * Query for the dates and temperature observations from the last year.
-
-  * Convert the query results to a Dictionary using `date` as the key and `tobs` as the value.
-
-  * Return the json representation of your dictionary.
-
-* `/api/v1.0/stations`
-
-  * Return a json list of stations from the dataset.
-
-* `/api/v1.0/tobs`
-
-  * Return a json list of Temperature Observations (tobs) for the previous year
-
-* `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
-
-  * Return a json list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
-
-  * When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
-
-  * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
-
-## Hints
-
-* You will need to join the station and measurement tables for some of the analysis queries.
-
-* Use Flask `jsonify` to convert your api data into a valid json response object.
-
-## Copyright
-
-Coding Boot Camp © 2017. All Rights Reserved.
+if __name__ == "__main__":
+    app.run(debug=True)
+```
