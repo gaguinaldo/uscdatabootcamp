@@ -1,4 +1,4 @@
-# Analysing Nearly 1MM Rows of Data Using Excel VBA
+# Analyzing Nearly 1MM Rows of Data Using Excel VBA
 
 ![](./submission/images/markus-spiske-484245-unsplash.jpg)
 
