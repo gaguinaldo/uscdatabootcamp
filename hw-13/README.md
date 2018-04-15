@@ -1,7 +1,6 @@
-# Homework 13:  Full Stack Web App to Visualize Data
+# Full Stack Web App to Visualize Data
 
 ![](./Images/james-wainscoat-521748-unsplash.jpg)
-
 
 In this project, I built an app to explore the data collected from the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
 

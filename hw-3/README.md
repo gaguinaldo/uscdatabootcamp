@@ -1,6 +1,11 @@
 # Data Analysis Using Pure Python
 
+![](./data/calculator-unsplash.jpg)
+
 For this project, I decided will analyze two different datasets (PyBank and PyPoll) using pure python.
+
+### Tech Stack
+* Python
 
 ### PyBank
 

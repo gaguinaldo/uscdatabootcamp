@@ -1,10 +1,18 @@
 # Using Python To Analyze Sentiment Of Twitter Feeds 
 
+![](./Archive/kingston-chen-364070-unsplash.jpg)
+
 For this project, **two** scripts were created that analyzes sentiment of various feeds on Twitter.
 
 **Part 1** describes a script that looks at the past tweets from five news sources and then calculates and plots the senitment of the 100 past tweets from each news source.
 
 **Part 2** describes a bot that when analyze the past 500 tweets of a twitter account when the bot is provided a twitter name via an 'at' reply.  
+
+### Tech Stack
+* Python
+* Pandas
+* Vader
+* Tweepy
 
 
 # Part 1:  Analyzing The Sentiment Of News Sources On Twitter
@@ -252,7 +260,7 @@ plt.show()
 ```
 
 
-![png](output_10_0.png)
+![png](./solution-1/output_10_0.png)
 
 
 
@@ -284,7 +292,7 @@ plt.show()
 ```
 
 
-![png](output_12_0.png)
+![png](./solution-1/output_12_0.png)
 
 ***
 
@@ -296,15 +304,15 @@ Once an account has been found, the bot then does an API call to return the past
 
 Sample images from the functional bot are found below.
 
-![](./image-1.jpg)
+![](./solution-1/image-1.jpg)
 
 
 
-![](./image-2.jpg)
+![](./solution-1/image-2.jpg)
 
 
 
-![](./image-3.jpg)
+![](./solution-1/image-3.jpg)
 
 
 ``` python

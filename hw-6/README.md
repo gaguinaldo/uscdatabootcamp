@@ -1,6 +1,8 @@
 
 # Charting Global Weather Patterns From Data Obtained from an API
 
+![](./Archive/clinton-naik-176636-unsplash.jpg)
+
 ### Deliverables 
 
 + [CSV Export](https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/hw-6/hw6_export.csv)
@@ -29,6 +31,12 @@ I started to solve this problem by deconstructing the overall problem into worka
 **Part 4:** Complete API calls for each of the 500 cities in the world and return the needed data into a Pandas dataframe, based on the structure that was identified in Part 1. By using a for loop, I then did 500 API calls to obtain the data and I populated the data into an empty Pandas dataframe.
 
 **Part 5:**  Complete the scatter plots for the four relationships that was requested using `matplotlib`.  Once the data was in the Pandas dataframe, I then created the lists needed to build the four scatter plots. 
+
+### Tech Stack
+* Python
+* Pandas
+* API Calls
+* Matplotlib
 
 ***
 

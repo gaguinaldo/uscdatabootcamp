@@ -1,6 +1,8 @@
 
 # Analysis of Ride Shareing Data
 
+![](./Archive/john-cobb-14133-unsplash.jpg)
+
 
 Based on this preliminary analysis three observations have been made.
 
@@ -11,6 +13,12 @@ Based on this preliminary analysis three observations have been made.
 **Thrid.**  Another reason for the difference in fare in urban and rural areas could be the distance  of the ride. Longer distances in rural areas could also lead to an increase in the average fare, however, the data set does not have any data related to the distance that each rider went on each ride. 
 
 The iPython Notebook of this assignment can be found [here](https://github.com/grantaguinaldo/uscdatabootcamp/blob/master/hw-5/hw-5.ipynb).
+
+### Tech Stack
+* Python
+* Pandas
+* Scipy
+* Matplotlib
  
 ***
 

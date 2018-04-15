@@ -1,5 +1,7 @@
 # Extracting Data From A SQL Database
 
+![](./images/chris-lawton-172561-unsplash.jpg)
+
 In this project, I create queries to extract information from the Sakila database.
 
 

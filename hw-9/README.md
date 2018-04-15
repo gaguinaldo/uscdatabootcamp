@@ -1,5 +1,7 @@
 # SQL/Flask Data Integration Project
 
+![](./images/christian-joudrey-89399-unsplash.jpg)
+
 For this project, I conducted an analysis of weather data that was provided in a CSV file.  
 
 The objective was to determine the historical weather patterns for a date range based on data that was collected at number of weather stations on the island of Oahu.

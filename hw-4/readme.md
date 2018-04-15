@@ -1,9 +1,16 @@
 
 # Data Analysis Using Pandas & Python
 
+![](./images/faustin-tuyambaze-135473-unsplash.jpg)
+
 This markdown file is my submission of homework 4 (Pandas). You can find a list to the homework assignment [here](http://usc.bootcampcontent.com/usc-boot-camp/USCLOS201710DATA5-Class-Repository-DATA/tree/master/Pandas/Homework%20Instructions/Instructions).
 
 The entire folder containing all of the files for this homework assignment is contained in my github folder [link](https://github.com/grantaguinaldo/uscdatabootcamp/tree/master/hw-4)
+
+### Tech Stack
+* Python
+* Pandas
+* Numpy
 
 ***
 
