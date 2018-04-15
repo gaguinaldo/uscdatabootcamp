@@ -6,6 +6,14 @@ For this project, I analyzed a dataset of more than 4,000 successful and unsucce
 
 Some of the charts that was created during this analysis are shown below.
 
+![](./images/image1.PNG)
+
+![](./images/image2.PNG)
+
+![](./images/image3.PNG)
+
+![](./images/image4.PNG)
+
 **1.	What are three conclusions we can make about Kickstarter campaigns given the provided data?**
 	
 * 2015 saw the largest amount of successful projects that were on the platform.  In the data set, the same trend was seen for failed and canceled projects.  Why does the number of successful projects peak in 2015?  What was so special about 2015?
