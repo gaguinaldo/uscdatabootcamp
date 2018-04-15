@@ -1,5 +1,5 @@
 
-# Py City Schools (Homework 4)
+# Data Analysis Using Pandas & Python
 
 This markdown file is my submission of homework 4 (Pandas). You can find a list to the homework assignment [here](http://usc.bootcampcontent.com/usc-boot-camp/USCLOS201710DATA5-Class-Repository-DATA/tree/master/Pandas/Homework%20Instructions/Instructions).
 
@@ -3301,5 +3301,3 @@ final_df
 
 
 *** 
-
-GTA (2017-12-01)
