@@ -311,6 +311,16 @@ These are some of the resources that I found useful for the bootcamp.
 * [d3 scales](http://d3indepth.com/scales/)
 * [Updated a forked repo on github](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
 * [Git cheatsheet](https://zeroturnaround.com/rebellabs/git-commands-and-best-practices-cheat-sheet/)
+* [AI Exercises](http://caisplusplus.usc.edu/blog/categories/)
+* [Keras channels parameter](https://keras.io/layers/convolutional/) 
+* [Paper Visualizing and Understanding Convolutional Networks)](https://arxiv.org/pdf/1311.2901.pdf)
+* [Paper on dropout](http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf)
+* [Pre-trained models (Keras)](https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/)
+* [Filters and Pooling Layers](https://medium.com/technologymadeeasy/the-best-explanation-of-convolutional-neural-networks-on-the-internet-fbb8b1ad5df8) 
+* [Keras VGG19](https://keras.io/applications/#vgg19) 
+* [ImageNet](https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/) 
+* [Flask uploading files](http://flask.pocoo.org/docs/0.12/patterns/fileuploads/)
+* [Deploying a Keras Model onto Google](https://youtu.be/f6Bf3gl4hWY)
 
 ***
 
