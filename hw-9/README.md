@@ -1,4 +1,4 @@
-# SQL/Flask Data Integration Project (Including A Live API)
+# SQL/Flask Data Integration Project
 
 For this project, I conducted an analysis of weather data that was provided in a CSV file.  
 
@@ -19,9 +19,6 @@ Once the API route were created, SQL queries were written to get the data needed
 ![](./Submission/images/image2.png)
 
 ![](./Submission/images/image3.png)
-
-
-### You can check out the live API by clicking here.
 
 ***
 
