@@ -1,5 +1,5 @@
 
-# Analysis of Ride Shareing Data
+# Analysis of Ride Sharing Data
 
 ![](./Archive/john-cobb-14133-unsplash.jpg)
 
