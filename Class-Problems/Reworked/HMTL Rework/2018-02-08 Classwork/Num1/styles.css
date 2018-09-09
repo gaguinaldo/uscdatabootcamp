@@ -1,0 +1,41 @@
+/* Add your styles here */
+body {
+    background: #F1F1F1;
+}
+
+h1 {
+font-size: 80px;
+}
+
+h2 {
+font-size: 30px;
+}
+
+.navbar {
+    padding: 10px;
+    background: #5191FD;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 3px;
+
+}
+
+.navbar li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.header h1 {
+
+    height: 200px;
+    padding-top: 20px;
+    background: #CDCDCD;
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giphy API</title>
+</head>
+
+<body>
+    <button>Giphy Me!</button>
+    <div class="imgGoesHere"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+    <script type="text/javascript">
+
+        //Enter Code Here.
+
+        d3.select('button').on('click', function() {
+
+
+            var movie = "Muppets";
+            var queryURL = "http://api.giphy.com/v1/gifs/search?q=movies+" + movie + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+            d3.json(queryURL, function(error, response) {
+            if (error) return console.warn(error);
+
+            var responseData = response.data[1].images.fixed_height.url;
+            d3.select('.imgGoesHere').append('img').attr('src', responseData)
+
+            })
+
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
